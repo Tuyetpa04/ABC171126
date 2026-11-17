@@ -1,0 +1,5824 @@
+{
+  "version": "32.6.9",
+  "pages": [
+    {
+      "id": "n9JHctfiCCKAUL_4PUac",
+      "name": "Đồng bộ hóa đơn email-gdt",
+      "cells": [
+        {
+          "id": "1",
+          "type": "layer"
+        },
+        {
+          "id": "L7ijPRKwwxhq5ra0MzBl-5",
+          "type": "node",
+          "parent": "1",
+          "label": "SMI"
+        },
+        {
+          "id": "cwi27gB8BBll_cGmLsMG-44",
+          "type": "node",
+          "parent": "1",
+          "label": "VALIDATE DỮ LIỆU - TIẾN HÀNH SONG SONG",
+          "html": "<b>VALIDATE DỮ LIỆU - TIẾN HÀNH SONG SONG</b>"
+        },
+        {
+          "id": "cwi27gB8BBll_cGmLsMG-41",
+          "type": "node",
+          "parent": "1",
+          "label": "VALIDATE DỮ LIỆU - TIẾN HÀNH SONG SONG",
+          "html": "<b>VALIDATE DỮ LIỆU - TIẾN HÀNH SONG SONG</b>"
+        },
+        {
+          "id": "kiTFsHgOpsV3unxmSmT8-17",
+          "type": "node",
+          "parent": "1",
+          "label": "Luồng đồng bộ từ thuế GDT hóa đơn mua vào"
+        },
+        {
+          "id": "kiTFsHgOpsV3unxmSmT8-18",
+          "type": "edge",
+          "parent": "1",
+          "source": "kiTFsHgOpsV3unxmSmT8-19",
+          "target": "kiTFsHgOpsV3unxmSmT8-21"
+        },
+        {
+          "id": "kiTFsHgOpsV3unxmSmT8-19",
+          "type": "node",
+          "parent": "1",
+          "label": "Start"
+        },
+        {
+          "id": "kiTFsHgOpsV3unxmSmT8-20",
+          "type": "edge",
+          "parent": "1",
+          "source": "kiTFsHgOpsV3unxmSmT8-21",
+          "target": "kiTFsHgOpsV3unxmSmT8-23"
+        },
+        {
+          "id": "kiTFsHgOpsV3unxmSmT8-21",
+          "type": "node",
+          "parent": "1",
+          "label": "Quét hộp thư đến\n(tìm email có file đính kèm) \ntừ ngày- đến ngày",
+          "html": "Quét hộp thư đến<br>(tìm email có file đính kèm) <br>từ ngày- đến ngày"
+        },
+        {
+          "id": "kiTFsHgOpsV3unxmSmT8-23",
+          "type": "node",
+          "parent": "1",
+          "label": "Kiểm tra file xml có đúng định dạng file hóa đơn theo quyết đinh 1510"
+        },
+        {
+          "id": "kiTFsHgOpsV3unxmSmT8-25",
+          "type": "node",
+          "parent": "1",
+          "label": "Kiểm tra mst người mua trên XML và MST của tài khoản thuế"
+        },
+        {
+          "id": "kiTFsHgOpsV3unxmSmT8-33",
+          "type": "node",
+          "parent": "1",
+          "label": "Luồng đồng bộ email hóa đơn đầu vào:"
+        },
+        {
+          "id": "kiTFsHgOpsV3unxmSmT8-36",
+          "type": "node",
+          "parent": "1",
+          "label": "So sánh ngày ký và ngày hiệu lực của chứng thư số"
+        },
+        {
+          "id": "kiTFsHgOpsV3unxmSmT8-38",
+          "type": "node",
+          "parent": "1",
+          "label": "So sánh ngày ký hóa đơn và ngày CQT cấp mã (Hóa đơn có mã)"
+        },
+        {
+          "id": "kiTFsHgOpsV3unxmSmT8-40",
+          "type": "node",
+          "parent": "1",
+          "label": "Kiểm tra thẻ mã CQT đối với Hóa đơn có mã"
+        },
+        {
+          "id": "2FvGtfv9j3zHEnxVqEcd-26",
+          "type": "edge",
+          "parent": "1",
+          "source": "kiTFsHgOpsV3unxmSmT8-44",
+          "target": "kiTFsHgOpsV3unxmSmT8-45"
+        },
+        {
+          "id": "kiTFsHgOpsV3unxmSmT8-44",
+          "type": "node",
+          "parent": "1",
+          "label": "Check trùng bộ key hóa đơn"
+        },
+        {
+          "id": "2FvGtfv9j3zHEnxVqEcd-27",
+          "type": "edge",
+          "parent": "1",
+          "source": "kiTFsHgOpsV3unxmSmT8-45",
+          "target": "2FvGtfv9j3zHEnxVqEcd-3"
+        },
+        {
+          "id": "kiTFsHgOpsV3unxmSmT8-45",
+          "type": "node",
+          "parent": "1",
+          "label": "Set nguồn đồng bộ cho dữ liệu"
+        },
+        {
+          "id": "kiTFsHgOpsV3unxmSmT8-60",
+          "type": "edge",
+          "parent": "1",
+          "source": "kiTFsHgOpsV3unxmSmT8-49",
+          "target": "kiTFsHgOpsV3unxmSmT8-59"
+        },
+        {
+          "id": "kiTFsHgOpsV3unxmSmT8-49",
+          "type": "node",
+          "parent": "1",
+          "label": "start"
+        },
+        {
+          "id": "2FvGtfv9j3zHEnxVqEcd-28",
+          "type": "edge",
+          "parent": "1",
+          "source": "kiTFsHgOpsV3unxmSmT8-50",
+          "target": "kiTFsHgOpsV3unxmSmT8-56"
+        },
+        {
+          "id": "kiTFsHgOpsV3unxmSmT8-50",
+          "type": "node",
+          "parent": "1",
+          "label": "Lấy đầu phiếu hóa đơn từ CQT theo từng MST và ngày hóa đơn"
+        },
+        {
+          "id": "kiTFsHgOpsV3unxmSmT8-56",
+          "type": "node",
+          "parent": "1",
+          "label": "Lọc lấy các hóa đơn thành công theo ttxly"
+        },
+        {
+          "id": "kiTFsHgOpsV3unxmSmT8-108",
+          "type": "edge",
+          "parent": "1",
+          "source": "kiTFsHgOpsV3unxmSmT8-59",
+          "target": "kiTFsHgOpsV3unxmSmT8-50"
+        },
+        {
+          "id": "kiTFsHgOpsV3unxmSmT8-59",
+          "type": "node",
+          "parent": "1",
+          "label": "Check trạng thái tự động đồng bộ của tài khoản"
+        },
+        {
+          "id": "kiTFsHgOpsV3unxmSmT8-68",
+          "type": "node",
+          "parent": "1",
+          "label": "Check trùng bộ key hóa đơn"
+        },
+        {
+          "id": "kiTFsHgOpsV3unxmSmT8-72",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "kiTFsHgOpsV3unxmSmT8-75",
+          "type": "node",
+          "parent": "1",
+          "label": "Kiểm tra tên đơn vị mua vào"
+        },
+        {
+          "id": "kiTFsHgOpsV3unxmSmT8-78",
+          "type": "node",
+          "parent": "1",
+          "label": "So sánh ngày ký và ngày cấp mã"
+        },
+        {
+          "id": "kiTFsHgOpsV3unxmSmT8-79",
+          "type": "node",
+          "parent": "1",
+          "label": "Kiểm tra ngày lập và ngày ký"
+        },
+        {
+          "id": "kiTFsHgOpsV3unxmSmT8-80",
+          "type": "node",
+          "parent": "1",
+          "label": "Kiểm tra tên đơn vị mua"
+        },
+        {
+          "id": "2FvGtfv9j3zHEnxVqEcd-1",
+          "type": "node",
+          "parent": "1",
+          "label": "Kiểm tra tính toàn vẹn file XML"
+        },
+        {
+          "id": "2FvGtfv9j3zHEnxVqEcd-6",
+          "type": "edge",
+          "parent": "1",
+          "source": "2FvGtfv9j3zHEnxVqEcd-3",
+          "target": "2FvGtfv9j3zHEnxVqEcd-5"
+        },
+        {
+          "id": "2FvGtfv9j3zHEnxVqEcd-3",
+          "type": "node",
+          "parent": "1",
+          "label": "Lưu thông tin hóa đơn vào CSDL"
+        },
+        {
+          "id": "2FvGtfv9j3zHEnxVqEcd-8",
+          "type": "edge",
+          "parent": "1",
+          "source": "2FvGtfv9j3zHEnxVqEcd-5",
+          "target": "2FvGtfv9j3zHEnxVqEcd-7"
+        },
+        {
+          "id": "2FvGtfv9j3zHEnxVqEcd-5",
+          "type": "node",
+          "parent": "1",
+          "label": "Lưu file XML, PDF hóa đơn vào CSDL"
+        },
+        {
+          "id": "2FvGtfv9j3zHEnxVqEcd-7",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "2FvGtfv9j3zHEnxVqEcd-9",
+          "type": "node",
+          "parent": "1",
+          "label": "So sánh ngày ký hóa đơn và ngày lập hóa đơn&nbsp;"
+        },
+        {
+          "id": "2FvGtfv9j3zHEnxVqEcd-12",
+          "type": "node",
+          "parent": "1",
+          "label": "Kiểm tra trạng thái đăng ký phát hành của người bán"
+        },
+        {
+          "id": "2FvGtfv9j3zHEnxVqEcd-16",
+          "type": "node",
+          "parent": "1",
+          "label": "Kiểm tra loại hóa đơn có phải máy tính tiền không?"
+        },
+        {
+          "id": "2FvGtfv9j3zHEnxVqEcd-32",
+          "type": "node",
+          "parent": "1",
+          "label": "Kiểm tra ngày hiệu lực chứng thư số và ngày ký"
+        },
+        {
+          "id": "2FvGtfv9j3zHEnxVqEcd-40",
+          "type": "edge",
+          "parent": "1",
+          "source": "2FvGtfv9j3zHEnxVqEcd-37",
+          "target": "2FvGtfv9j3zHEnxVqEcd-39"
+        },
+        {
+          "id": "2FvGtfv9j3zHEnxVqEcd-37",
+          "type": "node",
+          "parent": "1",
+          "label": "Set nguồn đồng bộ"
+        },
+        {
+          "id": "2FvGtfv9j3zHEnxVqEcd-42",
+          "type": "edge",
+          "parent": "1",
+          "source": "2FvGtfv9j3zHEnxVqEcd-39",
+          "target": "2FvGtfv9j3zHEnxVqEcd-41"
+        },
+        {
+          "id": "2FvGtfv9j3zHEnxVqEcd-39",
+          "type": "node",
+          "parent": "1",
+          "label": "Lưu đầu phiếu vào Cơ sở dữ liệu"
+        },
+        {
+          "id": "2FvGtfv9j3zHEnxVqEcd-43",
+          "type": "edge",
+          "parent": "1",
+          "source": "2FvGtfv9j3zHEnxVqEcd-41",
+          "target": "kiTFsHgOpsV3unxmSmT8-72"
+        },
+        {
+          "id": "2FvGtfv9j3zHEnxVqEcd-41",
+          "type": "node",
+          "parent": "1",
+          "label": "Tạo vòng lặp lấy chi tiết hóa đơn"
+        },
+        {
+          "id": "cwi27gB8BBll_cGmLsMG-15",
+          "type": "edge",
+          "parent": "1",
+          "source": "cwi27gB8BBll_cGmLsMG-2",
+          "target": "cwi27gB8BBll_cGmLsMG-14"
+        },
+        {
+          "id": "cwi27gB8BBll_cGmLsMG-2",
+          "type": "node",
+          "parent": "1",
+          "label": "Email Job"
+        },
+        {
+          "id": "cwi27gB8BBll_cGmLsMG-5",
+          "type": "edge",
+          "parent": "1",
+          "source": "cwi27gB8BBll_cGmLsMG-3",
+          "target": "cwi27gB8BBll_cGmLsMG-2"
+        },
+        {
+          "id": "cwi27gB8BBll_cGmLsMG-3",
+          "type": "node",
+          "parent": "1",
+          "label": "Email"
+        },
+        {
+          "id": "cwi27gB8BBll_cGmLsMG-17",
+          "type": "edge",
+          "parent": "1",
+          "source": "cwi27gB8BBll_cGmLsMG-14",
+          "target": "cwi27gB8BBll_cGmLsMG-16",
+          "label": "No"
+        },
+        {
+          "id": "cwi27gB8BBll_cGmLsMG-19",
+          "type": "edge",
+          "parent": "1",
+          "source": "cwi27gB8BBll_cGmLsMG-14",
+          "target": "cwi27gB8BBll_cGmLsMG-18",
+          "label": "Yes"
+        },
+        {
+          "id": "cwi27gB8BBll_cGmLsMG-14",
+          "type": "node",
+          "parent": "1",
+          "label": "Tồn tại?"
+        },
+        {
+          "id": "cwi27gB8BBll_cGmLsMG-21",
+          "type": "edge",
+          "parent": "1",
+          "source": "cwi27gB8BBll_cGmLsMG-16",
+          "target": "cwi27gB8BBll_cGmLsMG-20"
+        },
+        {
+          "id": "cwi27gB8BBll_cGmLsMG-16",
+          "type": "node",
+          "parent": "1",
+          "label": "- Insert đầu phiếu, chi tiết\n- Đính kèm 3 trường:\n+ Gmail message (id email)\n+ PDF\n+ XML\n- Data source: created by: gmail message",
+          "html": "- Insert đầu phiếu, chi tiết<br>- Đính kèm 3 trường:<br>+ Gmail message (id email)<br style=\"border-color: var(--border-color);\">+ PDF<br style=\"border-color: var(--border-color);\">+ XML<br>- Data source: created by: gmail message"
+        },
+        {
+          "id": "cwi27gB8BBll_cGmLsMG-18",
+          "type": "node",
+          "parent": "1",
+          "label": "Update trường Gmail:\n- Gmail message (id email)\n- PDF\n- XML",
+          "html": "Update trường Gmail:<br>- Gmail message (id email)<br>- PDF<br>- XML"
+        },
+        {
+          "id": "cwi27gB8BBll_cGmLsMG-20",
+          "type": "node",
+          "parent": "1",
+          "label": "Chạy job để lấy Detail. (trên CQT)\nDựa vào ký hiệu hóa đơn để xác định query tại hóa đơn thường hay máy tính tiền",
+          "html": "Chạy job để lấy Detail. <b>(trên&nbsp;CQT)</b><br>Dựa vào ký hiệu hóa đơn để xác định query tại hóa đơn thường hay máy tính tiền"
+        },
+        {
+          "id": "cwi27gB8BBll_cGmLsMG-22",
+          "type": "edge",
+          "parent": "1",
+          "source": "cwi27gB8BBll_cGmLsMG-23",
+          "target": "cwi27gB8BBll_cGmLsMG-28"
+        },
+        {
+          "id": "cwi27gB8BBll_cGmLsMG-23",
+          "type": "node",
+          "parent": "1",
+          "label": "Crawl Data"
+        },
+        {
+          "id": "cwi27gB8BBll_cGmLsMG-36",
+          "type": "edge",
+          "parent": "1",
+          "source": "cwi27gB8BBll_cGmLsMG-25",
+          "target": "cwi27gB8BBll_cGmLsMG-35"
+        },
+        {
+          "id": "cwi27gB8BBll_cGmLsMG-25",
+          "type": "node",
+          "parent": "1",
+          "label": "CQT"
+        },
+        {
+          "id": "cwi27gB8BBll_cGmLsMG-26",
+          "type": "edge",
+          "parent": "1",
+          "source": "cwi27gB8BBll_cGmLsMG-28",
+          "target": "cwi27gB8BBll_cGmLsMG-30",
+          "label": "No"
+        },
+        {
+          "id": "cwi27gB8BBll_cGmLsMG-27",
+          "type": "edge",
+          "parent": "1",
+          "source": "cwi27gB8BBll_cGmLsMG-28",
+          "target": "cwi27gB8BBll_cGmLsMG-31",
+          "label": "Yes"
+        },
+        {
+          "id": "cwi27gB8BBll_cGmLsMG-28",
+          "type": "node",
+          "parent": "1",
+          "label": "Tồn tại?"
+        },
+        {
+          "id": "cwi27gB8BBll_cGmLsMG-29",
+          "type": "edge",
+          "parent": "1",
+          "source": "cwi27gB8BBll_cGmLsMG-30",
+          "target": "cwi27gB8BBll_cGmLsMG-32"
+        },
+        {
+          "id": "cwi27gB8BBll_cGmLsMG-30",
+          "type": "node",
+          "parent": "1",
+          "label": "- Insert đầu phiếu\n- Data source: created by: crawl",
+          "html": "- Insert đầu phiếu<br>- Data source: created by: crawl"
+        },
+        {
+          "id": "cwi27gB8BBll_cGmLsMG-31",
+          "type": "node",
+          "parent": "1",
+          "label": "Update \n- header\n- last updated date",
+          "html": "Update <br>- header<br>- last updated date<br>"
+        },
+        {
+          "id": "cwi27gB8BBll_cGmLsMG-32",
+          "type": "node",
+          "parent": "1",
+          "label": "Chạy job để lấy Detail căn cứ trường from trong invoiceraws để query api hóa đơn thường hoặc máy tính tiền"
+        },
+        {
+          "id": "cwi27gB8BBll_cGmLsMG-39",
+          "type": "edge",
+          "parent": "1",
+          "source": "cwi27gB8BBll_cGmLsMG-35",
+          "target": "cwi27gB8BBll_cGmLsMG-38"
+        },
+        {
+          "id": "cwi27gB8BBll_cGmLsMG-35",
+          "type": "node",
+          "parent": "1",
+          "label": "Xác định thời gian từ ngày đến ngày (thuế cho tối đa 1 tháng)"
+        },
+        {
+          "id": "cwi27gB8BBll_cGmLsMG-40",
+          "type": "edge",
+          "parent": "1",
+          "source": "cwi27gB8BBll_cGmLsMG-38",
+          "target": "cwi27gB8BBll_cGmLsMG-23"
+        },
+        {
+          "id": "cwi27gB8BBll_cGmLsMG-38",
+          "type": "node",
+          "parent": "1",
+          "label": "Lấy last_sync để xác nhận ngày đồng bộ thành công gần nhất"
+        },
+        {
+          "id": "cwi27gB8BBll_cGmLsMG-42",
+          "type": "edge",
+          "parent": "1",
+          "source": "kiTFsHgOpsV3unxmSmT8-23",
+          "target": "cwi27gB8BBll_cGmLsMG-41"
+        },
+        {
+          "id": "cwi27gB8BBll_cGmLsMG-43",
+          "type": "edge",
+          "parent": "1",
+          "source": "cwi27gB8BBll_cGmLsMG-41",
+          "target": "kiTFsHgOpsV3unxmSmT8-44"
+        },
+        {
+          "id": "cwi27gB8BBll_cGmLsMG-46",
+          "type": "edge",
+          "parent": "1",
+          "source": "cwi27gB8BBll_cGmLsMG-44",
+          "target": "2FvGtfv9j3zHEnxVqEcd-37"
+        },
+        {
+          "id": "cwi27gB8BBll_cGmLsMG-47",
+          "type": "edge",
+          "parent": "1",
+          "target": "cwi27gB8BBll_cGmLsMG-44"
+        },
+        {
+          "id": "cwi27gB8BBll_cGmLsMG-48",
+          "type": "node",
+          "parent": "1",
+          "label": "Key = IdAccount + MST bên bán + Ký hiệu + Mẫu số + Số hoá đơn"
+        },
+        {
+          "id": "FT8tJx_SFc7pKHJmCey2-1",
+          "type": "node",
+          "parent": "1",
+          "label": "Key = IdAccount + MST bên bán + Ký hiệu + Mẫu số + Số hoá đơn"
+        },
+        {
+          "id": "FT8tJx_SFc7pKHJmCey2-11",
+          "type": "edge",
+          "parent": "1",
+          "source": "FT8tJx_SFc7pKHJmCey2-3",
+          "target": "FT8tJx_SFc7pKHJmCey2-10"
+        },
+        {
+          "id": "FT8tJx_SFc7pKHJmCey2-3",
+          "type": "node",
+          "parent": "1",
+          "label": "Ưu tiên 1: Nguồn upload: attachment với purpose=PDF"
+        },
+        {
+          "id": "FT8tJx_SFc7pKHJmCey2-8",
+          "type": "edge",
+          "parent": "1",
+          "source": "FT8tJx_SFc7pKHJmCey2-4",
+          "target": "FT8tJx_SFc7pKHJmCey2-7"
+        },
+        {
+          "id": "FT8tJx_SFc7pKHJmCey2-4",
+          "type": "node",
+          "parent": "1",
+          "label": "Ưu tiên 1: nguồn gmail"
+        },
+        {
+          "id": "FT8tJx_SFc7pKHJmCey2-6",
+          "type": "node",
+          "parent": "1",
+          "label": "Tải hóa đơn XML"
+        },
+        {
+          "id": "FT8tJx_SFc7pKHJmCey2-7",
+          "type": "node",
+          "parent": "1",
+          "label": "Ưu tiên 2: call lên CQT lấy XML"
+        },
+        {
+          "id": "FT8tJx_SFc7pKHJmCey2-9",
+          "type": "node",
+          "parent": "1",
+          "label": "Tải bản in hóa đơn"
+        },
+        {
+          "id": "FT8tJx_SFc7pKHJmCey2-13",
+          "type": "edge",
+          "parent": "1",
+          "source": "FT8tJx_SFc7pKHJmCey2-10",
+          "target": "FT8tJx_SFc7pKHJmCey2-12"
+        },
+        {
+          "id": "FT8tJx_SFc7pKHJmCey2-10",
+          "type": "node",
+          "parent": "1",
+          "label": "Ưu tiên 2: Nguồn gmail"
+        },
+        {
+          "id": "FT8tJx_SFc7pKHJmCey2-12",
+          "type": "node",
+          "parent": "1",
+          "label": "Ưu tiên 3: Tự build file html dựa theo mẫu CQT"
+        },
+        {
+          "id": "FT8tJx_SFc7pKHJmCey2-14",
+          "type": "node",
+          "parent": "1",
+          "label": "Xem hóa đơn"
+        },
+        {
+          "id": "FT8tJx_SFc7pKHJmCey2-15",
+          "type": "edge",
+          "parent": "1",
+          "source": "FT8tJx_SFc7pKHJmCey2-16",
+          "target": "FT8tJx_SFc7pKHJmCey2-18"
+        },
+        {
+          "id": "FT8tJx_SFc7pKHJmCey2-16",
+          "type": "node",
+          "parent": "1",
+          "label": "Ưu tiên 1: Nguồn upload. attachment với purpose=PDF"
+        },
+        {
+          "id": "FT8tJx_SFc7pKHJmCey2-17",
+          "type": "edge",
+          "parent": "1",
+          "source": "FT8tJx_SFc7pKHJmCey2-18",
+          "target": "FT8tJx_SFc7pKHJmCey2-19"
+        },
+        {
+          "id": "FT8tJx_SFc7pKHJmCey2-18",
+          "type": "node",
+          "parent": "1",
+          "label": "Ưu tiên 2: Nguồn gmail"
+        },
+        {
+          "id": "FT8tJx_SFc7pKHJmCey2-19",
+          "type": "node",
+          "parent": "1",
+          "label": "Ưu tiên 3: View mẫu html dựa theo mẫu CQT"
+        },
+        {
+          "id": "L7ijPRKwwxhq5ra0MzBl-1",
+          "type": "node",
+          "parent": "1",
+          "label": "1. Dữ liệu XML trong email và XML trên CQT ko khớp cấu trúc\n2. Email là từng hoá đơn, CQT bảng tổng hợp",
+          "html": "1. Dữ liệu XML trong email và XML trên CQT ko khớp cấu trúc<br>2. Email là từng hoá đơn, CQT bảng tổng hợp"
+        },
+        {
+          "id": "L7ijPRKwwxhq5ra0MzBl-2",
+          "type": "node",
+          "parent": "1",
+          "label": "1. Job đồng bộ ngắn: 7 ngày gần nhất\n2. Job đồng bộ dài: > 7 ngày gần nhất => Chạy cuối tuần",
+          "html": "1. Job đồng bộ ngắn: 7 ngày gần nhất<br>2. Job đồng bộ dài: &gt; 7 ngày gần nhất =&gt; Chạy cuối tuần"
+        },
+        {
+          "id": "L7ijPRKwwxhq5ra0MzBl-3",
+          "type": "node",
+          "parent": "1",
+          "label": "Job header"
+        },
+        {
+          "id": "L7ijPRKwwxhq5ra0MzBl-4",
+          "type": "node",
+          "parent": "1",
+          "label": "Job detail"
+        },
+        {
+          "id": "L7ijPRKwwxhq5ra0MzBl-10",
+          "type": "node",
+          "parent": "1",
+          "label": "Job detail\nShinhanbank",
+          "html": "Job detail<br>Shinhanbank"
+        },
+        {
+          "id": "L7ijPRKwwxhq5ra0MzBl-12",
+          "type": "edge",
+          "parent": "1",
+          "source": "L7ijPRKwwxhq5ra0MzBl-3",
+          "target": "L7ijPRKwwxhq5ra0MzBl-10"
+        }
+      ]
+    },
+    {
+      "id": "Pw6SGAt4QaiSZ0L_Mgey",
+      "name": "Danh sách khách hàng",
+      "cells": [
+        {
+          "id": "1",
+          "type": "layer"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-14",
+          "type": "edge",
+          "parent": "1",
+          "source": "iG_10tjzsW1I4jC3vyMf-1",
+          "target": "iG_10tjzsW1I4jC3vyMf-13"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-1",
+          "type": "node",
+          "parent": "1",
+          "label": "Tài khoản SMI"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-7",
+          "type": "edge",
+          "parent": "1",
+          "source": "iG_10tjzsW1I4jC3vyMf-2",
+          "target": "iG_10tjzsW1I4jC3vyMf-6"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-9",
+          "type": "edge",
+          "parent": "1",
+          "source": "iG_10tjzsW1I4jC3vyMf-2",
+          "target": "iG_10tjzsW1I4jC3vyMf-8"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-10",
+          "type": "edge",
+          "parent": "1",
+          "source": "iG_10tjzsW1I4jC3vyMf-2",
+          "target": "iG_10tjzsW1I4jC3vyMf-8"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-12",
+          "type": "edge",
+          "parent": "1",
+          "source": "iG_10tjzsW1I4jC3vyMf-2",
+          "target": "iG_10tjzsW1I4jC3vyMf-11"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-2",
+          "type": "node",
+          "parent": "1",
+          "label": "Lưu danh sách và \nthông tin từng MST:\nMST 1, MST 2, MST 3\n.....",
+          "html": "Lưu danh sách và <br>thông tin từng MST:<br>MST 1, MST 2, MST 3<br>....."
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-23",
+          "type": "edge",
+          "parent": "1",
+          "source": "iG_10tjzsW1I4jC3vyMf-6",
+          "target": "iG_10tjzsW1I4jC3vyMf-16"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-6",
+          "type": "node",
+          "parent": "1",
+          "label": "TK Thuế 1"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-19",
+          "type": "edge",
+          "parent": "1",
+          "source": "iG_10tjzsW1I4jC3vyMf-8",
+          "target": "iG_10tjzsW1I4jC3vyMf-18"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-21",
+          "type": "edge",
+          "parent": "1",
+          "source": "iG_10tjzsW1I4jC3vyMf-11",
+          "target": "iG_10tjzsW1I4jC3vyMf-20"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-11",
+          "type": "node",
+          "parent": "1",
+          "label": "TK Thuế 3"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-15",
+          "type": "edge",
+          "parent": "1",
+          "source": "iG_10tjzsW1I4jC3vyMf-13",
+          "target": "iG_10tjzsW1I4jC3vyMf-2"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-13",
+          "type": "node",
+          "parent": "1",
+          "label": "Đồng bộ hóa đơn"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-26",
+          "type": "edge",
+          "parent": "1",
+          "target": "iG_10tjzsW1I4jC3vyMf-28"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-16",
+          "type": "node",
+          "parent": "1",
+          "label": "MST 1"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-30",
+          "type": "edge",
+          "parent": "1",
+          "source": "iG_10tjzsW1I4jC3vyMf-18",
+          "target": "iG_10tjzsW1I4jC3vyMf-29"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-18",
+          "type": "node",
+          "parent": "1",
+          "label": "MST 1\nMST 2",
+          "html": "MST 1<br>MST 2"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-32",
+          "type": "edge",
+          "parent": "1",
+          "source": "iG_10tjzsW1I4jC3vyMf-20",
+          "target": "iG_10tjzsW1I4jC3vyMf-31"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-20",
+          "type": "node",
+          "parent": "1",
+          "label": "MST 1\nMST 3",
+          "html": "MST 1<br>MST 3"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-8",
+          "type": "node",
+          "parent": "1",
+          "label": "TK Thuế 2"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-28",
+          "type": "node",
+          "parent": "1",
+          "label": "Danh sách hóa đơn"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-29",
+          "type": "node",
+          "parent": "1",
+          "label": "Danh sách hóa đơn"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-31",
+          "type": "node",
+          "parent": "1",
+          "label": "Danh sách hóa đơn"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-35",
+          "type": "edge",
+          "parent": "1",
+          "source": "iG_10tjzsW1I4jC3vyMf-33",
+          "target": "iG_10tjzsW1I4jC3vyMf-34"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-37",
+          "type": "edge",
+          "parent": "1",
+          "source": "iG_10tjzsW1I4jC3vyMf-33",
+          "target": "iG_10tjzsW1I4jC3vyMf-36"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-39",
+          "type": "edge",
+          "parent": "1",
+          "source": "iG_10tjzsW1I4jC3vyMf-33",
+          "target": "iG_10tjzsW1I4jC3vyMf-38"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-33",
+          "type": "node",
+          "parent": "1",
+          "label": "Tài khoản SMI"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-41",
+          "type": "edge",
+          "parent": "1",
+          "source": "iG_10tjzsW1I4jC3vyMf-34",
+          "target": "iG_10tjzsW1I4jC3vyMf-40"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-34",
+          "type": "node",
+          "parent": "1",
+          "label": "Tài khoản thuế 1"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-44",
+          "type": "edge",
+          "parent": "1",
+          "source": "iG_10tjzsW1I4jC3vyMf-36",
+          "target": "iG_10tjzsW1I4jC3vyMf-42"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-36",
+          "type": "node",
+          "parent": "1",
+          "label": "Tài khoản thuế 2"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-45",
+          "type": "edge",
+          "parent": "1",
+          "source": "iG_10tjzsW1I4jC3vyMf-38",
+          "target": "iG_10tjzsW1I4jC3vyMf-43"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-38",
+          "type": "node",
+          "parent": "1",
+          "label": "Tài khoản thuế 3"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-47",
+          "type": "edge",
+          "parent": "1",
+          "source": "iG_10tjzsW1I4jC3vyMf-40",
+          "target": "iG_10tjzsW1I4jC3vyMf-46"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-40",
+          "type": "node",
+          "parent": "1",
+          "label": "Danh sách hóa đơn đồng bộ"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-49",
+          "type": "edge",
+          "parent": "1",
+          "source": "iG_10tjzsW1I4jC3vyMf-42",
+          "target": "iG_10tjzsW1I4jC3vyMf-48"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-42",
+          "type": "node",
+          "parent": "1",
+          "label": "Danh sách hóa đơn đồng bộ"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-51",
+          "type": "edge",
+          "parent": "1",
+          "source": "iG_10tjzsW1I4jC3vyMf-43",
+          "target": "iG_10tjzsW1I4jC3vyMf-50"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-43",
+          "type": "node",
+          "parent": "1",
+          "label": "Danh sách hóa đơn đồng bộ"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-53",
+          "type": "edge",
+          "parent": "1",
+          "source": "iG_10tjzsW1I4jC3vyMf-46",
+          "target": "iG_10tjzsW1I4jC3vyMf-52"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-46",
+          "type": "node",
+          "parent": "1",
+          "label": "Danh sách MST\nCount SL HĐ, \ntổng tiền",
+          "html": "Danh sách MST<br>Count SL HĐ, <br>tổng tiền"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-54",
+          "type": "edge",
+          "parent": "1",
+          "source": "iG_10tjzsW1I4jC3vyMf-48",
+          "target": "iG_10tjzsW1I4jC3vyMf-52"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-48",
+          "type": "node",
+          "parent": "1",
+          "label": "Danh sách MST\nCount SL HĐ,\ntổng tiền",
+          "html": "Danh sách MST<br style=\"border-color: var(--border-color);\">Count SL HĐ,<br style=\"border-color: var(--border-color);\">tổng tiền"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-55",
+          "type": "edge",
+          "parent": "1",
+          "source": "iG_10tjzsW1I4jC3vyMf-50",
+          "target": "iG_10tjzsW1I4jC3vyMf-52"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-50",
+          "type": "node",
+          "parent": "1",
+          "label": "Danh sách MST\nCount SL HĐ,\ntổng tiền",
+          "html": "Danh sách MST<br style=\"border-color: var(--border-color);\">Count SL HĐ,<br style=\"border-color: var(--border-color);\">tổng tiền"
+        },
+        {
+          "id": "iG_10tjzsW1I4jC3vyMf-52",
+          "type": "node",
+          "parent": "1",
+          "label": "Call lên CQT để lấy trạng thái MST"
+        }
+      ]
+    },
+    {
+      "id": "ajsKvG7RVqnQUtlLZ9mA",
+      "name": "Gán nhãn tự động",
+      "cells": [
+        {
+          "id": "1",
+          "type": "layer"
+        },
+        {
+          "id": "REoZFoKV55W_PX7QN-n5-3",
+          "type": "edge",
+          "parent": "1",
+          "source": "REoZFoKV55W_PX7QN-n5-1",
+          "target": "REoZFoKV55W_PX7QN-n5-2"
+        },
+        {
+          "id": "REoZFoKV55W_PX7QN-n5-1",
+          "type": "node",
+          "parent": "1",
+          "label": "Start"
+        },
+        {
+          "id": "REoZFoKV55W_PX7QN-n5-5",
+          "type": "edge",
+          "parent": "1",
+          "source": "REoZFoKV55W_PX7QN-n5-2",
+          "target": "REoZFoKV55W_PX7QN-n5-4"
+        },
+        {
+          "id": "REoZFoKV55W_PX7QN-n5-2",
+          "type": "node",
+          "parent": "1",
+          "label": "Call lên thuế \nlấy thông tin hóa đơn",
+          "html": "Call lên thuế <br>lấy thông tin hóa đơn"
+        },
+        {
+          "id": "REoZFoKV55W_PX7QN-n5-7",
+          "type": "edge",
+          "parent": "1",
+          "source": "REoZFoKV55W_PX7QN-n5-4",
+          "target": "REoZFoKV55W_PX7QN-n5-6"
+        },
+        {
+          "id": "REoZFoKV55W_PX7QN-n5-4",
+          "type": "node",
+          "parent": "1",
+          "label": "Lưu đầu phiếu hóa đơn vào CSDL"
+        },
+        {
+          "id": "REoZFoKV55W_PX7QN-n5-9",
+          "type": "edge",
+          "parent": "1",
+          "source": "REoZFoKV55W_PX7QN-n5-6",
+          "target": "REoZFoKV55W_PX7QN-n5-8"
+        },
+        {
+          "id": "REoZFoKV55W_PX7QN-n5-6",
+          "type": "node",
+          "parent": "1",
+          "label": "Lấy thông tin nhãn theo MST bên bán hoặc bên mua đã khai báo trong DM"
+        },
+        {
+          "id": "REoZFoKV55W_PX7QN-n5-11",
+          "type": "edge",
+          "parent": "1",
+          "source": "REoZFoKV55W_PX7QN-n5-8",
+          "target": "REoZFoKV55W_PX7QN-n5-10"
+        },
+        {
+          "id": "REoZFoKV55W_PX7QN-n5-8",
+          "type": "node",
+          "parent": "1",
+          "label": "Cập nhật nhãn vào bản ghi đã lưu"
+        },
+        {
+          "id": "REoZFoKV55W_PX7QN-n5-10",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        }
+      ]
+    },
+    {
+      "id": "60ps-p1xxWxbOF-yVqDC",
+      "name": "Tự động đăng nhập TK thuế",
+      "cells": [
+        {
+          "id": "1",
+          "type": "layer"
+        },
+        {
+          "id": "wkJ2DdZrCl8uXWrCEmZU-4",
+          "type": "edge",
+          "parent": "1",
+          "source": "wkJ2DdZrCl8uXWrCEmZU-1",
+          "target": "wkJ2DdZrCl8uXWrCEmZU-3"
+        },
+        {
+          "id": "wkJ2DdZrCl8uXWrCEmZU-1",
+          "type": "node",
+          "parent": "1",
+          "label": "Start"
+        },
+        {
+          "id": "wkJ2DdZrCl8uXWrCEmZU-2",
+          "type": "node",
+          "parent": "1",
+          "label": "TỰ ĐỘNG ĐĂNG NHẬP TÀI KHOẢN THUẾ"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-8",
+          "type": "edge",
+          "parent": "1",
+          "source": "wkJ2DdZrCl8uXWrCEmZU-3",
+          "target": "eOUS5cP6NGfKpFSZZKtf-7"
+        },
+        {
+          "id": "wkJ2DdZrCl8uXWrCEmZU-3",
+          "type": "node",
+          "parent": "1",
+          "label": "Lấy danh sách TK Thuế cần đăng nhập"
+        },
+        {
+          "id": "wkJ2DdZrCl8uXWrCEmZU-8",
+          "type": "edge",
+          "parent": "1",
+          "source": "wkJ2DdZrCl8uXWrCEmZU-5",
+          "target": "wkJ2DdZrCl8uXWrCEmZU-7"
+        },
+        {
+          "id": "wkJ2DdZrCl8uXWrCEmZU-5",
+          "type": "node",
+          "parent": "1",
+          "label": "Lấy Captcha từ TCT"
+        },
+        {
+          "id": "wkJ2DdZrCl8uXWrCEmZU-10",
+          "type": "edge",
+          "parent": "1",
+          "source": "wkJ2DdZrCl8uXWrCEmZU-7",
+          "target": "wkJ2DdZrCl8uXWrCEmZU-9"
+        },
+        {
+          "id": "wkJ2DdZrCl8uXWrCEmZU-7",
+          "type": "node",
+          "parent": "1",
+          "label": "Call API Login của TCT"
+        },
+        {
+          "id": "wkJ2DdZrCl8uXWrCEmZU-12",
+          "type": "edge",
+          "parent": "1",
+          "source": "wkJ2DdZrCl8uXWrCEmZU-9",
+          "target": "wkJ2DdZrCl8uXWrCEmZU-11"
+        },
+        {
+          "id": "wkJ2DdZrCl8uXWrCEmZU-9",
+          "type": "node",
+          "parent": "1",
+          "label": "Phân loại kết quả trả về"
+        },
+        {
+          "id": "wkJ2DdZrCl8uXWrCEmZU-14",
+          "type": "edge",
+          "parent": "1",
+          "source": "wkJ2DdZrCl8uXWrCEmZU-11",
+          "target": "wkJ2DdZrCl8uXWrCEmZU-13"
+        },
+        {
+          "id": "wkJ2DdZrCl8uXWrCEmZU-11",
+          "type": "node",
+          "parent": "1",
+          "label": "Ghi nhận lịch sử thao tác"
+        },
+        {
+          "id": "wkJ2DdZrCl8uXWrCEmZU-13",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "wkJ2DdZrCl8uXWrCEmZU-19",
+          "type": "edge",
+          "parent": "1",
+          "source": "wkJ2DdZrCl8uXWrCEmZU-15",
+          "target": "wkJ2DdZrCl8uXWrCEmZU-18"
+        },
+        {
+          "id": "wkJ2DdZrCl8uXWrCEmZU-15",
+          "type": "node",
+          "parent": "1",
+          "label": "Start"
+        },
+        {
+          "id": "wkJ2DdZrCl8uXWrCEmZU-16",
+          "type": "node",
+          "parent": "1",
+          "label": "LEVEL 2 - CHI TIẾT NGHIỆP VỤ"
+        },
+        {
+          "id": "wkJ2DdZrCl8uXWrCEmZU-17",
+          "type": "node",
+          "parent": "1"
+        },
+        {
+          "id": "wkJ2DdZrCl8uXWrCEmZU-21",
+          "type": "edge",
+          "parent": "wkJ2DdZrCl8uXWrCEmZU-17",
+          "source": "wkJ2DdZrCl8uXWrCEmZU-18",
+          "target": "wkJ2DdZrCl8uXWrCEmZU-20"
+        },
+        {
+          "id": "wkJ2DdZrCl8uXWrCEmZU-18",
+          "type": "node",
+          "parent": "wkJ2DdZrCl8uXWrCEmZU-17",
+          "label": "Kiểm tra config để lấy thời gian bắt đầu quét"
+        },
+        {
+          "id": "wkJ2DdZrCl8uXWrCEmZU-20",
+          "type": "node",
+          "parent": "wkJ2DdZrCl8uXWrCEmZU-17",
+          "label": "Lấy danh sách các TK thuế cần quét"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-1",
+          "type": "node",
+          "parent": "1"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-17",
+          "type": "edge",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-1",
+          "source": "eOUS5cP6NGfKpFSZZKtf-5",
+          "target": "eOUS5cP6NGfKpFSZZKtf-16"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-5",
+          "type": "node",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-1",
+          "label": "Tạo vòng lặp, Lấy từng TK thuế để xử lý"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-15",
+          "type": "edge",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-1",
+          "source": "eOUS5cP6NGfKpFSZZKtf-12",
+          "target": "eOUS5cP6NGfKpFSZZKtf-14"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-12",
+          "type": "node",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-1",
+          "label": "Ghi nhận tài khoản đã sign-out, không tự động login"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-14",
+          "type": "node",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-1",
+          "label": "End"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-18",
+          "type": "edge",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-1",
+          "source": "eOUS5cP6NGfKpFSZZKtf-16",
+          "target": "eOUS5cP6NGfKpFSZZKtf-12",
+          "label": "true"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-16",
+          "type": "node",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-1",
+          "label": "Kiểm tra \nsign-out",
+          "html": "Kiểm tra <br>sign-out"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-6",
+          "type": "edge",
+          "parent": "1",
+          "source": "wkJ2DdZrCl8uXWrCEmZU-20",
+          "target": "eOUS5cP6NGfKpFSZZKtf-5"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-9",
+          "type": "edge",
+          "parent": "1",
+          "source": "eOUS5cP6NGfKpFSZZKtf-7",
+          "target": "wkJ2DdZrCl8uXWrCEmZU-5"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-7",
+          "type": "node",
+          "parent": "1",
+          "label": "Phân loại khách hàng\ntrước khi call lên thuế",
+          "html": "Phân loại khách hàng<br>trước khi call lên thuế"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-19",
+          "type": "node",
+          "parent": "1"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-31",
+          "type": "edge",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-19",
+          "source": "eOUS5cP6NGfKpFSZZKtf-21",
+          "target": "eOUS5cP6NGfKpFSZZKtf-30"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-21",
+          "type": "node",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-19",
+          "label": "Call lên thuế lấy Captcha"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-24",
+          "type": "node",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-19",
+          "label": "End"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-37",
+          "type": "edge",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-19",
+          "source": "eOUS5cP6NGfKpFSZZKtf-28",
+          "target": "eOUS5cP6NGfKpFSZZKtf-29",
+          "label": "Thành công"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-40",
+          "type": "edge",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-19",
+          "source": "eOUS5cP6NGfKpFSZZKtf-28",
+          "target": "eOUS5cP6NGfKpFSZZKtf-39",
+          "label": "Có lỗi"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-28",
+          "type": "node",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-19",
+          "label": "Kiểm tra kết quả"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-38",
+          "type": "edge",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-19",
+          "source": "eOUS5cP6NGfKpFSZZKtf-29",
+          "target": "eOUS5cP6NGfKpFSZZKtf-24"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-29",
+          "type": "node",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-19",
+          "label": "Ghi nhận lịch sử login thành công"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-35",
+          "type": "edge",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-19",
+          "source": "eOUS5cP6NGfKpFSZZKtf-30",
+          "target": "eOUS5cP6NGfKpFSZZKtf-34"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-30",
+          "type": "node",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-19",
+          "label": "Lấy username và decrypt password trong DB"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-36",
+          "type": "edge",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-19",
+          "source": "eOUS5cP6NGfKpFSZZKtf-34",
+          "target": "eOUS5cP6NGfKpFSZZKtf-28"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-34",
+          "type": "node",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-19",
+          "label": "Call lên thuế để login"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-42",
+          "type": "edge",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-19",
+          "source": "eOUS5cP6NGfKpFSZZKtf-39",
+          "target": "eOUS5cP6NGfKpFSZZKtf-41",
+          "label": "200"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-46",
+          "type": "edge",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-19",
+          "source": "eOUS5cP6NGfKpFSZZKtf-39",
+          "target": "eOUS5cP6NGfKpFSZZKtf-45"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-39",
+          "type": "node",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-19",
+          "label": "Phân loại lỗi theo https code"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-44",
+          "type": "edge",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-19",
+          "source": "eOUS5cP6NGfKpFSZZKtf-41",
+          "target": "eOUS5cP6NGfKpFSZZKtf-43"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-41",
+          "type": "node",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-19",
+          "label": "Ghi nhận lịch sử tên lỗi do TCT trả về"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-43",
+          "type": "node",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-19",
+          "label": "End"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-49",
+          "type": "edge",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-19",
+          "source": "eOUS5cP6NGfKpFSZZKtf-45",
+          "target": "eOUS5cP6NGfKpFSZZKtf-48"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-45",
+          "type": "node",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-19",
+          "label": "Retry thêm 1 lần&nbsp;"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-55",
+          "type": "edge",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-19",
+          "source": "eOUS5cP6NGfKpFSZZKtf-48",
+          "target": "eOUS5cP6NGfKpFSZZKtf-54",
+          "label": "Có lỗi"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-48",
+          "type": "node",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-19",
+          "label": "Kiểm tra kết quả"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-50",
+          "type": "node",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-19",
+          "label": "End"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-51",
+          "type": "edge",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-19",
+          "source": "eOUS5cP6NGfKpFSZZKtf-48",
+          "target": "eOUS5cP6NGfKpFSZZKtf-53",
+          "label": "Thành công"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-52",
+          "type": "edge",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-19",
+          "source": "eOUS5cP6NGfKpFSZZKtf-53",
+          "target": "eOUS5cP6NGfKpFSZZKtf-50"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-53",
+          "type": "node",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-19",
+          "label": "Ghi nhận lịch sử login thành công"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-54",
+          "type": "node",
+          "parent": "eOUS5cP6NGfKpFSZZKtf-19",
+          "label": "Ghi lịch sử lỗi cho TK thuế và chuyển sang Tk khác"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-27",
+          "type": "edge",
+          "parent": "1",
+          "source": "eOUS5cP6NGfKpFSZZKtf-16",
+          "target": "eOUS5cP6NGfKpFSZZKtf-21",
+          "label": "flase"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-47",
+          "type": "node",
+          "parent": "1",
+          "label": "LEVEL 1 - LUỒNG TỔNG QUAN"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-58",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "eOUS5cP6NGfKpFSZZKtf-59",
+          "type": "edge",
+          "parent": "1",
+          "source": "eOUS5cP6NGfKpFSZZKtf-54",
+          "target": "eOUS5cP6NGfKpFSZZKtf-58"
+        }
+      ]
+    },
+    {
+      "id": "JsST9-W1JZKRtDTYUgnG",
+      "name": "Đồng bộ 04/SS",
+      "cells": [
+        {
+          "id": "1",
+          "type": "layer"
+        },
+        {
+          "id": "vS6lxFoCDRgixeaRmcnQ-3",
+          "type": "edge",
+          "parent": "1",
+          "source": "vS6lxFoCDRgixeaRmcnQ-1",
+          "target": "vS6lxFoCDRgixeaRmcnQ-2"
+        },
+        {
+          "id": "vS6lxFoCDRgixeaRmcnQ-1",
+          "type": "node",
+          "parent": "1",
+          "label": "Start"
+        },
+        {
+          "id": "vS6lxFoCDRgixeaRmcnQ-5",
+          "type": "edge",
+          "parent": "1",
+          "source": "vS6lxFoCDRgixeaRmcnQ-2",
+          "target": "vS6lxFoCDRgixeaRmcnQ-4"
+        },
+        {
+          "id": "vS6lxFoCDRgixeaRmcnQ-2",
+          "type": "node",
+          "parent": "1",
+          "label": "Định kỳ job quét danh sách mã số thuế và gửi yêu cầu đồng bộ dữ liệu"
+        },
+        {
+          "id": "vS6lxFoCDRgixeaRmcnQ-7",
+          "type": "edge",
+          "parent": "1",
+          "source": "vS6lxFoCDRgixeaRmcnQ-4",
+          "target": "vS6lxFoCDRgixeaRmcnQ-6"
+        },
+        {
+          "id": "vS6lxFoCDRgixeaRmcnQ-4",
+          "type": "node",
+          "parent": "1",
+          "label": "Call lên CQT để lấy danh sách thông báo 04/SS"
+        },
+        {
+          "id": "vS6lxFoCDRgixeaRmcnQ-9",
+          "type": "edge",
+          "parent": "1",
+          "source": "vS6lxFoCDRgixeaRmcnQ-6",
+          "target": "vS6lxFoCDRgixeaRmcnQ-8"
+        },
+        {
+          "id": "vS6lxFoCDRgixeaRmcnQ-6",
+          "type": "node",
+          "parent": "1",
+          "label": "Call API để lấy thông tin Lý do gửi 04/SS theo bộ MST, ký hiệu, số hóa đơn"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-15",
+          "type": "edge",
+          "parent": "1",
+          "source": "vS6lxFoCDRgixeaRmcnQ-8",
+          "target": "elLj5tfC08_oMk2LJ9Qv-14"
+        },
+        {
+          "id": "vS6lxFoCDRgixeaRmcnQ-8",
+          "type": "node",
+          "parent": "1",
+          "label": "Insert dữ liệu đầy đủ thông tin vào DB"
+        },
+        {
+          "id": "QlodhYqth8zSRQsU1goV-12",
+          "type": "edge",
+          "parent": "1",
+          "source": "vS6lxFoCDRgixeaRmcnQ-10",
+          "target": "QlodhYqth8zSRQsU1goV-11"
+        },
+        {
+          "id": "vS6lxFoCDRgixeaRmcnQ-10",
+          "type": "node",
+          "parent": "1",
+          "label": "Lấy lên màn hình danh sách 04/SS"
+        },
+        {
+          "id": "xY_GdEOuD7ys6OvadFt4-1",
+          "type": "node",
+          "parent": "1",
+          "label": "ĐỒNG BỘ 04/SS BÁN RA"
+        },
+        {
+          "id": "xY_GdEOuD7ys6OvadFt4-2",
+          "type": "node",
+          "parent": "1",
+          "label": "ĐỒNG BỘ 04SS HÓA ĐƠN MUA VÀO"
+        },
+        {
+          "id": "xY_GdEOuD7ys6OvadFt4-5",
+          "type": "edge",
+          "parent": "1",
+          "source": "xY_GdEOuD7ys6OvadFt4-3",
+          "target": "xY_GdEOuD7ys6OvadFt4-4"
+        },
+        {
+          "id": "xY_GdEOuD7ys6OvadFt4-3",
+          "type": "node",
+          "parent": "1",
+          "label": "Start"
+        },
+        {
+          "id": "QlodhYqth8zSRQsU1goV-3",
+          "type": "edge",
+          "parent": "1",
+          "source": "xY_GdEOuD7ys6OvadFt4-4",
+          "target": "xY_GdEOuD7ys6OvadFt4-8"
+        },
+        {
+          "id": "xY_GdEOuD7ys6OvadFt4-4",
+          "type": "node",
+          "parent": "1",
+          "label": "Định kỳ job sẽ quét các MST cần chạy đồng bộ"
+        },
+        {
+          "id": "QlodhYqth8zSRQsU1goV-2",
+          "type": "edge",
+          "parent": "1",
+          "source": "xY_GdEOuD7ys6OvadFt4-8",
+          "target": "QlodhYqth8zSRQsU1goV-1"
+        },
+        {
+          "id": "xY_GdEOuD7ys6OvadFt4-8",
+          "type": "node",
+          "parent": "1",
+          "label": "Lấy danh sách các hóa đơn đầu vào ở trạng thái Hủy, Bị điều chỉnh, bị thay thế của MST đang làm việc"
+        },
+        {
+          "id": "QlodhYqth8zSRQsU1goV-5",
+          "type": "edge",
+          "parent": "1",
+          "source": "QlodhYqth8zSRQsU1goV-1",
+          "target": "QlodhYqth8zSRQsU1goV-4"
+        },
+        {
+          "id": "QlodhYqth8zSRQsU1goV-1",
+          "type": "node",
+          "parent": "1",
+          "label": "Call lên API lấy thông tin liên quan"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-18",
+          "type": "edge",
+          "parent": "1",
+          "source": "QlodhYqth8zSRQsU1goV-4",
+          "target": "QlodhYqth8zSRQsU1goV-6"
+        },
+        {
+          "id": "QlodhYqth8zSRQsU1goV-4",
+          "type": "node",
+          "parent": "1",
+          "label": "Bóc tách vùng thông tin hóa đơn sai sót và lưu vào CSDL (Bỏ qua các idtbao đã có)"
+        },
+        {
+          "id": "QlodhYqth8zSRQsU1goV-9",
+          "type": "edge",
+          "parent": "1",
+          "source": "QlodhYqth8zSRQsU1goV-6",
+          "target": "QlodhYqth8zSRQsU1goV-8"
+        },
+        {
+          "id": "QlodhYqth8zSRQsU1goV-6",
+          "type": "node",
+          "parent": "1",
+          "label": "Hiển thị lên giao diện người dùng"
+        },
+        {
+          "id": "QlodhYqth8zSRQsU1goV-8",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "QlodhYqth8zSRQsU1goV-10",
+          "type": "node",
+          "parent": "1",
+          "label": "ĐỒNG BỘ 04/SS THỦ CÔNG"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-1",
+          "type": "node",
+          "parent": "1",
+          "label": "ĐỒNG BỘ 04/SS TỰ ĐỘNG&nbsp;"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-13",
+          "type": "node",
+          "parent": "1",
+          "label": "ĐỒNG BỘ 04/SS BÁN RA"
+        },
+        {
+          "id": "QlodhYqth8zSRQsU1goV-11",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-16",
+          "type": "edge",
+          "parent": "1",
+          "source": "elLj5tfC08_oMk2LJ9Qv-14",
+          "target": "vS6lxFoCDRgixeaRmcnQ-10"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-14",
+          "type": "node",
+          "parent": "1",
+          "label": "Dữ liệu trùng thì bỏ qua"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-20",
+          "type": "edge",
+          "parent": "1",
+          "source": "elLj5tfC08_oMk2LJ9Qv-21",
+          "target": "elLj5tfC08_oMk2LJ9Qv-23"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-21",
+          "type": "node",
+          "parent": "1",
+          "label": "Start"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-22",
+          "type": "edge",
+          "parent": "1",
+          "source": "elLj5tfC08_oMk2LJ9Qv-23",
+          "target": "elLj5tfC08_oMk2LJ9Qv-25"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-23",
+          "type": "node",
+          "parent": "1",
+          "label": "người dùng sẽ thao tác trên form đồng bộ thủ công"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-24",
+          "type": "edge",
+          "parent": "1",
+          "source": "elLj5tfC08_oMk2LJ9Qv-25",
+          "target": "elLj5tfC08_oMk2LJ9Qv-27"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-25",
+          "type": "node",
+          "parent": "1",
+          "label": "Call lên CQT để lấy danh sách thông báo 04/SS"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-26",
+          "type": "edge",
+          "parent": "1",
+          "source": "elLj5tfC08_oMk2LJ9Qv-27",
+          "target": "elLj5tfC08_oMk2LJ9Qv-29"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-27",
+          "type": "node",
+          "parent": "1",
+          "label": "Call API để lấy thông tin Lý do gửi 04/SS theo bộ MST, ký hiệu, số hóa đơn"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-28",
+          "type": "edge",
+          "parent": "1",
+          "source": "elLj5tfC08_oMk2LJ9Qv-29",
+          "target": "elLj5tfC08_oMk2LJ9Qv-34"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-29",
+          "type": "node",
+          "parent": "1",
+          "label": "Insert dữ liệu đầy đủ thông tin vào DB"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-30",
+          "type": "edge",
+          "parent": "1",
+          "source": "elLj5tfC08_oMk2LJ9Qv-31",
+          "target": "elLj5tfC08_oMk2LJ9Qv-32"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-31",
+          "type": "node",
+          "parent": "1",
+          "label": "Lấy lên màn hình danh sách 04/SS"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-32",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-33",
+          "type": "edge",
+          "parent": "1",
+          "source": "elLj5tfC08_oMk2LJ9Qv-34",
+          "target": "elLj5tfC08_oMk2LJ9Qv-31"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-34",
+          "type": "node",
+          "parent": "1",
+          "label": "Dữ liệu trùng thì bỏ qua"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-35",
+          "type": "node",
+          "parent": "1",
+          "label": "ĐỒNG BỘ 04SS HÓA ĐƠN MUA VÀO"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-36",
+          "type": "edge",
+          "parent": "1",
+          "source": "elLj5tfC08_oMk2LJ9Qv-37",
+          "target": "elLj5tfC08_oMk2LJ9Qv-39"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-37",
+          "type": "node",
+          "parent": "1",
+          "label": "Start"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-38",
+          "type": "edge",
+          "parent": "1",
+          "source": "elLj5tfC08_oMk2LJ9Qv-39",
+          "target": "elLj5tfC08_oMk2LJ9Qv-41"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-39",
+          "type": "node",
+          "parent": "1",
+          "label": "người dùng sẽ thao tác trên form đồng bộ thủ công"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-40",
+          "type": "edge",
+          "parent": "1",
+          "source": "elLj5tfC08_oMk2LJ9Qv-41",
+          "target": "elLj5tfC08_oMk2LJ9Qv-43"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-41",
+          "type": "node",
+          "parent": "1",
+          "label": "Lấy toàn bộ thông tin MST, ký hiệu, số hóa đơn của đơn vị"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-42",
+          "type": "edge",
+          "parent": "1",
+          "source": "elLj5tfC08_oMk2LJ9Qv-43",
+          "target": "elLj5tfC08_oMk2LJ9Qv-45"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-43",
+          "type": "node",
+          "parent": "1",
+          "label": "Call lên API lấy thông tin liên quan"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-44",
+          "type": "edge",
+          "parent": "1",
+          "source": "elLj5tfC08_oMk2LJ9Qv-45",
+          "target": "elLj5tfC08_oMk2LJ9Qv-47"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-45",
+          "type": "node",
+          "parent": "1",
+          "label": "Bóc tách vùng thông tin hóa đơn sai sót và lưu vào CSDL (Bỏ qua các idtbao đã có)"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-46",
+          "type": "edge",
+          "parent": "1",
+          "source": "elLj5tfC08_oMk2LJ9Qv-47",
+          "target": "elLj5tfC08_oMk2LJ9Qv-48"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-47",
+          "type": "node",
+          "parent": "1",
+          "label": "Hiển thị lên giao diện người dùng"
+        },
+        {
+          "id": "elLj5tfC08_oMk2LJ9Qv-48",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        }
+      ]
+    },
+    {
+      "id": "cVi9Y2jSXkJs1sfgvYT4",
+      "name": "API tạo TK thuế",
+      "cells": [
+        {
+          "id": "1",
+          "type": "layer"
+        },
+        {
+          "id": "pN3zlF2-vHdOv8s3K9CT-1",
+          "type": "node",
+          "parent": "1",
+          "label": "Lưu dữ liệu vào DB"
+        },
+        {
+          "id": "pN3zlF2-vHdOv8s3K9CT-2",
+          "type": "edge",
+          "parent": "1",
+          "source": "pN3zlF2-vHdOv8s3K9CT-4",
+          "target": "pN3zlF2-vHdOv8s3K9CT-6",
+          "label": "No"
+        },
+        {
+          "id": "pN3zlF2-vHdOv8s3K9CT-3",
+          "type": "edge",
+          "parent": "1",
+          "source": "pN3zlF2-vHdOv8s3K9CT-4",
+          "target": "pN3zlF2-vHdOv8s3K9CT-8",
+          "label": "Yes"
+        },
+        {
+          "id": "pN3zlF2-vHdOv8s3K9CT-4",
+          "type": "node",
+          "parent": "1",
+          "label": "Kiểm tra ngày đồng bộ mua vào"
+        },
+        {
+          "id": "pN3zlF2-vHdOv8s3K9CT-5",
+          "type": "edge",
+          "parent": "1",
+          "source": "pN3zlF2-vHdOv8s3K9CT-6",
+          "target": "pN3zlF2-vHdOv8s3K9CT-8"
+        },
+        {
+          "id": "pN3zlF2-vHdOv8s3K9CT-6",
+          "type": "node",
+          "parent": "1",
+          "label": "Lấy ngày đồng bộ là ngày đầu tiên của tháng\nTrạng thái đồng bộ mua vào mặc định là true",
+          "html": "Lấy ngày đồng bộ là ngày đầu tiên của tháng<br>Trạng thái đồng bộ mua vào mặc định là true"
+        },
+        {
+          "id": "Xi7ayFLOXu00GVolCkLW-11",
+          "type": "edge",
+          "parent": "1",
+          "source": "pN3zlF2-vHdOv8s3K9CT-8",
+          "target": "Xi7ayFLOXu00GVolCkLW-10"
+        },
+        {
+          "id": "pN3zlF2-vHdOv8s3K9CT-8",
+          "type": "node",
+          "parent": "1",
+          "label": "Lấy danh sách tài khoản thuế đã đăng ký của tk đăng nhập"
+        },
+        {
+          "id": "pN3zlF2-vHdOv8s3K9CT-11",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "pN3zlF2-vHdOv8s3K9CT-12",
+          "type": "edge",
+          "parent": "1",
+          "source": "pN3zlF2-vHdOv8s3K9CT-13",
+          "target": "pN3zlF2-vHdOv8s3K9CT-11"
+        },
+        {
+          "id": "pN3zlF2-vHdOv8s3K9CT-13",
+          "type": "node",
+          "parent": "1",
+          "label": "Lưu dữ liệu và DB và trả\nerrorCode 00: Thành công",
+          "html": "Lưu dữ liệu và DB và trả<br>errorCode 00: Thành công"
+        },
+        {
+          "id": "pN3zlF2-vHdOv8s3K9CT-14",
+          "type": "node",
+          "parent": "1",
+          "label": "Tham số đồng bộ bán ra nếu không truyền gì mặc định là false"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-52",
+          "type": "node",
+          "parent": "1",
+          "label": "Đăng nhập trang thuế"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-40",
+          "type": "node",
+          "parent": "1",
+          "label": "Xử lý captcha"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-16",
+          "type": "node",
+          "parent": "1",
+          "label": "Validate dữ liệu truyền vào"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-11",
+          "type": "edge",
+          "parent": "1",
+          "source": "NneY8PDSWyC9YOwvU0mY-1",
+          "target": "NneY8PDSWyC9YOwvU0mY-10"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-1",
+          "type": "node",
+          "parent": "1",
+          "label": "Start"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-5",
+          "type": "edge",
+          "parent": "1",
+          "source": "NneY8PDSWyC9YOwvU0mY-2",
+          "target": "NneY8PDSWyC9YOwvU0mY-4"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-2",
+          "type": "node",
+          "parent": "1",
+          "label": "Xử lý captcha"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-7",
+          "type": "edge",
+          "parent": "1",
+          "source": "NneY8PDSWyC9YOwvU0mY-4",
+          "target": "NneY8PDSWyC9YOwvU0mY-6"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-4",
+          "type": "node",
+          "parent": "1",
+          "label": "Đăng nhập trang thuế"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-9",
+          "type": "edge",
+          "parent": "1",
+          "source": "NneY8PDSWyC9YOwvU0mY-6",
+          "target": "NneY8PDSWyC9YOwvU0mY-8"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-6",
+          "type": "node",
+          "parent": "1",
+          "label": "Lưu dữ liệu vào DB"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-8",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-12",
+          "type": "edge",
+          "parent": "1",
+          "source": "NneY8PDSWyC9YOwvU0mY-10",
+          "target": "NneY8PDSWyC9YOwvU0mY-2"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-10",
+          "type": "node",
+          "parent": "1",
+          "label": "Validate dữ liệu"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-13",
+          "type": "node",
+          "parent": "1",
+          "label": "LUỒNG NGHIỆP VỤ TỔNG QUÁT"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-14",
+          "type": "node",
+          "parent": "1",
+          "label": "LUỒNG NGHỆP VỤ CHI TIẾT"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-38",
+          "type": "edge",
+          "parent": "1",
+          "source": "NneY8PDSWyC9YOwvU0mY-15",
+          "target": "NneY8PDSWyC9YOwvU0mY-37"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-15",
+          "type": "node",
+          "parent": "1",
+          "label": "Start"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-22",
+          "type": "edge",
+          "parent": "1",
+          "source": "NneY8PDSWyC9YOwvU0mY-19",
+          "target": "NneY8PDSWyC9YOwvU0mY-21",
+          "label": "No"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-26",
+          "type": "edge",
+          "parent": "1",
+          "source": "NneY8PDSWyC9YOwvU0mY-19",
+          "target": "NneY8PDSWyC9YOwvU0mY-25"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-19",
+          "type": "node",
+          "parent": "1",
+          "label": "Các trường bắt buộc"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-24",
+          "type": "edge",
+          "parent": "1",
+          "source": "NneY8PDSWyC9YOwvU0mY-21",
+          "target": "NneY8PDSWyC9YOwvU0mY-23"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-21",
+          "type": "node",
+          "parent": "1",
+          "label": "errorCode 01: Bạn chưa nhập đủ thông tin username/password"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-23",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-28",
+          "type": "edge",
+          "parent": "1",
+          "source": "NneY8PDSWyC9YOwvU0mY-25",
+          "target": "NneY8PDSWyC9YOwvU0mY-27",
+          "label": "Yes"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-30",
+          "type": "edge",
+          "parent": "1",
+          "source": "NneY8PDSWyC9YOwvU0mY-25",
+          "target": "NneY8PDSWyC9YOwvU0mY-29",
+          "label": "No"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-25",
+          "type": "node",
+          "parent": "1",
+          "label": "Định dạng username"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-34",
+          "type": "edge",
+          "parent": "1",
+          "source": "NneY8PDSWyC9YOwvU0mY-27",
+          "target": "NneY8PDSWyC9YOwvU0mY-33",
+          "label": "No"
+        },
+        {
+          "id": "Xi7ayFLOXu00GVolCkLW-2",
+          "type": "edge",
+          "parent": "1",
+          "source": "NneY8PDSWyC9YOwvU0mY-27",
+          "target": "Xi7ayFLOXu00GVolCkLW-1"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-27",
+          "type": "node",
+          "parent": "1",
+          "label": "Định dạng mật khẩu"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-32",
+          "type": "edge",
+          "parent": "1",
+          "source": "NneY8PDSWyC9YOwvU0mY-29",
+          "target": "NneY8PDSWyC9YOwvU0mY-31"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-29",
+          "type": "node",
+          "parent": "1",
+          "label": "errorCode 02: Username có độ dài tối đa 14 ký tự, chỉ bao gồm số và dấu gạch ngang"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-31",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-36",
+          "type": "edge",
+          "parent": "1",
+          "source": "NneY8PDSWyC9YOwvU0mY-33",
+          "target": "NneY8PDSWyC9YOwvU0mY-35"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-33",
+          "type": "node",
+          "parent": "1",
+          "label": "errorCode 03:&nbsp;Mật khẩu phải bao gồm chữ hoa, chữ thường, chữ số, ký tự đặc biệt"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-35",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-39",
+          "type": "edge",
+          "parent": "1",
+          "source": "NneY8PDSWyC9YOwvU0mY-37",
+          "target": "NneY8PDSWyC9YOwvU0mY-19"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-37",
+          "type": "node",
+          "parent": "1",
+          "label": "Lấy username/password trong input json"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-45",
+          "type": "edge",
+          "parent": "1",
+          "source": "NneY8PDSWyC9YOwvU0mY-42",
+          "target": "NneY8PDSWyC9YOwvU0mY-44"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-42",
+          "type": "node",
+          "parent": "1",
+          "label": "Call lên thuế lấy captcha"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-47",
+          "type": "edge",
+          "parent": "1",
+          "source": "NneY8PDSWyC9YOwvU0mY-44",
+          "target": "NneY8PDSWyC9YOwvU0mY-46",
+          "label": "No"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-51",
+          "type": "edge",
+          "parent": "1",
+          "source": "NneY8PDSWyC9YOwvU0mY-44",
+          "target": "NneY8PDSWyC9YOwvU0mY-50"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-44",
+          "type": "node",
+          "parent": "1",
+          "label": "Kiểm tra \nphản hồi",
+          "html": "Kiểm tra <br>phản hồi"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-49",
+          "type": "edge",
+          "parent": "1",
+          "source": "NneY8PDSWyC9YOwvU0mY-46",
+          "target": "NneY8PDSWyC9YOwvU0mY-48"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-46",
+          "type": "node",
+          "parent": "1",
+          "label": "errorCode 04: Không lấy được captcha từ CQT"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-48",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-54",
+          "type": "edge",
+          "parent": "1",
+          "source": "NneY8PDSWyC9YOwvU0mY-50",
+          "target": "NneY8PDSWyC9YOwvU0mY-53"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-50",
+          "type": "node",
+          "parent": "1",
+          "label": "Xử lý captcha lấy ckey, cvalue"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-58",
+          "type": "edge",
+          "parent": "1",
+          "source": "NneY8PDSWyC9YOwvU0mY-53",
+          "target": "NneY8PDSWyC9YOwvU0mY-57"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-53",
+          "type": "node",
+          "parent": "1",
+          "label": "Call API đăng nhập của CQT"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-60",
+          "type": "edge",
+          "parent": "1",
+          "source": "NneY8PDSWyC9YOwvU0mY-57",
+          "target": "NneY8PDSWyC9YOwvU0mY-59",
+          "label": "No"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-64",
+          "type": "edge",
+          "parent": "1",
+          "source": "NneY8PDSWyC9YOwvU0mY-57",
+          "target": "NneY8PDSWyC9YOwvU0mY-63",
+          "label": "Yes"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-57",
+          "type": "node",
+          "parent": "1",
+          "label": "Kiểm tra \nphản hồi http code 500",
+          "html": "Kiểm tra <br>phản hồi http code 500"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-62",
+          "type": "edge",
+          "parent": "1",
+          "source": "NneY8PDSWyC9YOwvU0mY-59",
+          "target": "NneY8PDSWyC9YOwvU0mY-61"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-59",
+          "type": "node",
+          "parent": "1",
+          "label": "errorCode 05: Trang web của CQT gián đoạn, vui lòng thử lại sau"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-61",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-66",
+          "type": "edge",
+          "parent": "1",
+          "source": "NneY8PDSWyC9YOwvU0mY-63",
+          "target": "NneY8PDSWyC9YOwvU0mY-65",
+          "label": "No"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-70",
+          "type": "edge",
+          "parent": "1",
+          "source": "NneY8PDSWyC9YOwvU0mY-63",
+          "target": "NneY8PDSWyC9YOwvU0mY-69"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-63",
+          "type": "node",
+          "parent": "1",
+          "label": "Kiểm tra kết quả captcha"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-68",
+          "type": "edge",
+          "parent": "1",
+          "source": "NneY8PDSWyC9YOwvU0mY-65",
+          "target": "NneY8PDSWyC9YOwvU0mY-67"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-65",
+          "type": "node",
+          "parent": "1",
+          "label": "errorCode 06: Không xác thực được Captcha, vui lòng thử lại"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-67",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-72",
+          "type": "edge",
+          "parent": "1",
+          "source": "NneY8PDSWyC9YOwvU0mY-69",
+          "target": "NneY8PDSWyC9YOwvU0mY-71",
+          "label": "No"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-90",
+          "type": "edge",
+          "parent": "1",
+          "source": "NneY8PDSWyC9YOwvU0mY-69",
+          "target": "pN3zlF2-vHdOv8s3K9CT-4"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-69",
+          "type": "node",
+          "parent": "1",
+          "label": "Kiểm tra phản hồi user/pass"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-74",
+          "type": "edge",
+          "parent": "1",
+          "source": "NneY8PDSWyC9YOwvU0mY-71",
+          "target": "NneY8PDSWyC9YOwvU0mY-73"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-71",
+          "type": "node",
+          "parent": "1",
+          "label": "errorCode 07:&nbsp;Tên đăng nhập hoặc mật khẩu không đúng"
+        },
+        {
+          "id": "NneY8PDSWyC9YOwvU0mY-73",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "0aPLSRMkD80JdMd9KZoF-1",
+          "type": "node",
+          "parent": "1",
+          "label": "Bắt buộc\nusername\nvà password",
+          "html": "Bắt buộc<br>username<br>và password"
+        },
+        {
+          "id": "Xi7ayFLOXu00GVolCkLW-4",
+          "type": "edge",
+          "parent": "1",
+          "source": "Xi7ayFLOXu00GVolCkLW-1",
+          "target": "Xi7ayFLOXu00GVolCkLW-3"
+        },
+        {
+          "id": "yH6nt6JC1Co2jVOrn-C2-1",
+          "type": "node",
+          "parent": "Xi7ayFLOXu00GVolCkLW-4",
+          "label": "No"
+        },
+        {
+          "id": "Xi7ayFLOXu00GVolCkLW-1",
+          "type": "node",
+          "parent": "1",
+          "label": "Kiểm tra có ngày đồng bộ khi trạng thái động bộ là true"
+        },
+        {
+          "id": "Xi7ayFLOXu00GVolCkLW-6",
+          "type": "edge",
+          "parent": "1",
+          "source": "Xi7ayFLOXu00GVolCkLW-3",
+          "target": "Xi7ayFLOXu00GVolCkLW-5"
+        },
+        {
+          "id": "Xi7ayFLOXu00GVolCkLW-3",
+          "type": "node",
+          "parent": "1",
+          "label": "Error 10/11"
+        },
+        {
+          "id": "Xi7ayFLOXu00GVolCkLW-5",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "Xi7ayFLOXu00GVolCkLW-7",
+          "type": "edge",
+          "parent": "1",
+          "source": "Xi7ayFLOXu00GVolCkLW-1",
+          "target": "NneY8PDSWyC9YOwvU0mY-42"
+        },
+        {
+          "id": "yH6nt6JC1Co2jVOrn-C2-2",
+          "type": "node",
+          "parent": "Xi7ayFLOXu00GVolCkLW-7",
+          "label": "Yes"
+        },
+        {
+          "id": "Xi7ayFLOXu00GVolCkLW-13",
+          "type": "edge",
+          "parent": "1",
+          "source": "Xi7ayFLOXu00GVolCkLW-10",
+          "target": "Xi7ayFLOXu00GVolCkLW-12",
+          "label": "Yes"
+        },
+        {
+          "id": "Xi7ayFLOXu00GVolCkLW-14",
+          "type": "edge",
+          "parent": "1",
+          "source": "Xi7ayFLOXu00GVolCkLW-10",
+          "target": "pN3zlF2-vHdOv8s3K9CT-13",
+          "label": "No"
+        },
+        {
+          "id": "Xi7ayFLOXu00GVolCkLW-10",
+          "type": "node",
+          "parent": "1",
+          "label": "Kiểm tra tồn tại tài khoản thuế"
+        },
+        {
+          "id": "Xi7ayFLOXu00GVolCkLW-16",
+          "type": "edge",
+          "parent": "1",
+          "source": "Xi7ayFLOXu00GVolCkLW-12",
+          "target": "Xi7ayFLOXu00GVolCkLW-15"
+        },
+        {
+          "id": "Xi7ayFLOXu00GVolCkLW-12",
+          "type": "node",
+          "parent": "1",
+          "label": "errorCode 12: Tài khoản thuế đã tồn tại trên phần mềm"
+        },
+        {
+          "id": "Xi7ayFLOXu00GVolCkLW-15",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        }
+      ]
+    },
+    {
+      "id": "R-aZuizk_uGZG1KMpbcn",
+      "name": "API sửa thông tinTK thuế",
+      "cells": [
+        {
+          "id": "1",
+          "type": "layer"
+        },
+        {
+          "id": "1CTexCQZWr-Rv86HrC00-1",
+          "type": "node",
+          "parent": "1",
+          "label": "Lưu dữ liệu vào DB"
+        },
+        {
+          "id": "1CTexCQZWr-Rv86HrC00-2",
+          "type": "edge",
+          "parent": "1",
+          "source": "1CTexCQZWr-Rv86HrC00-3",
+          "target": "1CTexCQZWr-Rv86HrC00-6"
+        },
+        {
+          "id": "1CTexCQZWr-Rv86HrC00-3",
+          "type": "node",
+          "parent": "1",
+          "label": "Cập nhật các tham số sửa đổi vào DB"
+        },
+        {
+          "id": "1CTexCQZWr-Rv86HrC00-4",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "1CTexCQZWr-Rv86HrC00-5",
+          "type": "edge",
+          "parent": "1",
+          "source": "1CTexCQZWr-Rv86HrC00-6",
+          "target": "1CTexCQZWr-Rv86HrC00-4"
+        },
+        {
+          "id": "1CTexCQZWr-Rv86HrC00-6",
+          "type": "node",
+          "parent": "1",
+          "label": "Trả về errorCode 00: Thành công"
+        },
+        {
+          "id": "juylwtOS7PX6IaT6grYJ-2",
+          "type": "node",
+          "parent": "1",
+          "label": "VALIDATE THÔNG TIN ĐỒNG BỘ",
+          "html": "<b>VALIDATE THÔNG TIN ĐỒNG BỘ</b>"
+        },
+        {
+          "id": "9UkaYlTdQf1z_ukK_FGM-3",
+          "type": "edge",
+          "parent": "1",
+          "source": "9UkaYlTdQf1z_ukK_FGM-1",
+          "target": "9UkaYlTdQf1z_ukK_FGM-2"
+        },
+        {
+          "id": "9UkaYlTdQf1z_ukK_FGM-1",
+          "type": "node",
+          "parent": "1",
+          "label": "Start"
+        },
+        {
+          "id": "NaNfGiouWft0gZM5wWgJ-8",
+          "type": "edge",
+          "parent": "1",
+          "source": "9UkaYlTdQf1z_ukK_FGM-2",
+          "target": "NaNfGiouWft0gZM5wWgJ-2"
+        },
+        {
+          "id": "9UkaYlTdQf1z_ukK_FGM-2",
+          "type": "node",
+          "parent": "1",
+          "label": "Validate dữ liệu truyền vào"
+        },
+        {
+          "id": "NaNfGiouWft0gZM5wWgJ-1",
+          "type": "edge",
+          "parent": "1",
+          "source": "NaNfGiouWft0gZM5wWgJ-2",
+          "target": "NaNfGiouWft0gZM5wWgJ-4"
+        },
+        {
+          "id": "NaNfGiouWft0gZM5wWgJ-2",
+          "type": "node",
+          "parent": "1",
+          "label": "Xử lý captcha"
+        },
+        {
+          "id": "NaNfGiouWft0gZM5wWgJ-3",
+          "type": "edge",
+          "parent": "1",
+          "source": "NaNfGiouWft0gZM5wWgJ-4",
+          "target": "NaNfGiouWft0gZM5wWgJ-6"
+        },
+        {
+          "id": "NaNfGiouWft0gZM5wWgJ-4",
+          "type": "node",
+          "parent": "1",
+          "label": "Đăng nhập trang thuế"
+        },
+        {
+          "id": "NaNfGiouWft0gZM5wWgJ-5",
+          "type": "edge",
+          "parent": "1",
+          "source": "NaNfGiouWft0gZM5wWgJ-6",
+          "target": "NaNfGiouWft0gZM5wWgJ-7"
+        },
+        {
+          "id": "NaNfGiouWft0gZM5wWgJ-6",
+          "type": "node",
+          "parent": "1",
+          "label": "Lưu dữ liệu vào DB"
+        },
+        {
+          "id": "NaNfGiouWft0gZM5wWgJ-7",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-2",
+          "type": "node",
+          "parent": "1",
+          "label": "Đăng nhập trang thuế"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-3",
+          "type": "node",
+          "parent": "1",
+          "label": "Xử lý captcha"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-4",
+          "type": "node",
+          "parent": "1",
+          "label": "Validate dữ liệu truyền vào"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-5",
+          "type": "node",
+          "parent": "1",
+          "label": "LUỒNG NGHỆP VỤ CHI TIẾT"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-6",
+          "type": "edge",
+          "parent": "1",
+          "source": "itQzGqQGjT7w6FfsXI56-7",
+          "target": "itQzGqQGjT7w6FfsXI56-27"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-7",
+          "type": "node",
+          "parent": "1",
+          "label": "Start"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-8",
+          "type": "edge",
+          "parent": "1",
+          "source": "itQzGqQGjT7w6FfsXI56-10",
+          "target": "itQzGqQGjT7w6FfsXI56-12",
+          "label": "No"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-9",
+          "type": "edge",
+          "parent": "1",
+          "source": "itQzGqQGjT7w6FfsXI56-10",
+          "target": "itQzGqQGjT7w6FfsXI56-19",
+          "label": "yes"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-10",
+          "type": "node",
+          "parent": "1",
+          "label": "Các trường bắt buộc"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-11",
+          "type": "edge",
+          "parent": "1",
+          "source": "itQzGqQGjT7w6FfsXI56-12",
+          "target": "itQzGqQGjT7w6FfsXI56-13"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-12",
+          "type": "node",
+          "parent": "1",
+          "label": "errorCode 01: Bạn chưa truyền thông tin id tài khoản"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-13",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-17",
+          "type": "edge",
+          "parent": "1",
+          "source": "itQzGqQGjT7w6FfsXI56-19",
+          "target": "itQzGqQGjT7w6FfsXI56-24",
+          "label": "No"
+        },
+        {
+          "id": "juylwtOS7PX6IaT6grYJ-4",
+          "type": "edge",
+          "parent": "1",
+          "source": "itQzGqQGjT7w6FfsXI56-19",
+          "target": "juylwtOS7PX6IaT6grYJ-3",
+          "label": "yes"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-19",
+          "type": "node",
+          "parent": "1",
+          "label": "Định dạng mật khẩu nếu có truyền"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-23",
+          "type": "edge",
+          "parent": "1",
+          "source": "itQzGqQGjT7w6FfsXI56-24",
+          "target": "itQzGqQGjT7w6FfsXI56-25"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-24",
+          "type": "node",
+          "parent": "1",
+          "label": "errorCode 03:&nbsp;Mật khẩu phải bao gồm chữ hoa, chữ thường, chữ số, ký tự đặc biệt"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-25",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-26",
+          "type": "edge",
+          "parent": "1",
+          "source": "itQzGqQGjT7w6FfsXI56-27",
+          "target": "itQzGqQGjT7w6FfsXI56-10"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-27",
+          "type": "node",
+          "parent": "1",
+          "label": "Lấy ID và password trong input json"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-28",
+          "type": "edge",
+          "parent": "1",
+          "source": "itQzGqQGjT7w6FfsXI56-29",
+          "target": "itQzGqQGjT7w6FfsXI56-32"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-29",
+          "type": "node",
+          "parent": "1",
+          "label": "Call lên thuế lấy captcha"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-30",
+          "type": "edge",
+          "parent": "1",
+          "source": "itQzGqQGjT7w6FfsXI56-32",
+          "target": "itQzGqQGjT7w6FfsXI56-34",
+          "label": "No"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-31",
+          "type": "edge",
+          "parent": "1",
+          "source": "itQzGqQGjT7w6FfsXI56-32",
+          "target": "itQzGqQGjT7w6FfsXI56-37"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-32",
+          "type": "node",
+          "parent": "1",
+          "label": "Kiểm tra \nphản hồi",
+          "html": "Kiểm tra <br>phản hồi"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-33",
+          "type": "edge",
+          "parent": "1",
+          "source": "itQzGqQGjT7w6FfsXI56-34",
+          "target": "itQzGqQGjT7w6FfsXI56-35"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-34",
+          "type": "node",
+          "parent": "1",
+          "label": "errorCode 04: Không lấy được captcha từ CQT"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-35",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-36",
+          "type": "edge",
+          "parent": "1",
+          "source": "itQzGqQGjT7w6FfsXI56-37",
+          "target": "itQzGqQGjT7w6FfsXI56-39"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-37",
+          "type": "node",
+          "parent": "1",
+          "label": "Xử lý captcha lấy ckey, cvalue"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-38",
+          "type": "edge",
+          "parent": "1",
+          "source": "itQzGqQGjT7w6FfsXI56-39",
+          "target": "itQzGqQGjT7w6FfsXI56-42"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-39",
+          "type": "node",
+          "parent": "1",
+          "label": "Call API đăng nhập của CQT"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-40",
+          "type": "edge",
+          "parent": "1",
+          "source": "itQzGqQGjT7w6FfsXI56-42",
+          "target": "itQzGqQGjT7w6FfsXI56-44",
+          "label": "No"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-41",
+          "type": "edge",
+          "parent": "1",
+          "source": "itQzGqQGjT7w6FfsXI56-42",
+          "target": "itQzGqQGjT7w6FfsXI56-48",
+          "label": "Yes"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-42",
+          "type": "node",
+          "parent": "1",
+          "label": "Kiểm tra \nphản hồi http code 500",
+          "html": "Kiểm tra <br>phản hồi http code 500"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-43",
+          "type": "edge",
+          "parent": "1",
+          "source": "itQzGqQGjT7w6FfsXI56-44",
+          "target": "itQzGqQGjT7w6FfsXI56-45"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-44",
+          "type": "node",
+          "parent": "1",
+          "label": "errorCode 05: Trang web của CQT gián đoạn, vui lòng thử lại sau"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-45",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-46",
+          "type": "edge",
+          "parent": "1",
+          "source": "itQzGqQGjT7w6FfsXI56-48",
+          "target": "itQzGqQGjT7w6FfsXI56-50",
+          "label": "No"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-47",
+          "type": "edge",
+          "parent": "1",
+          "source": "itQzGqQGjT7w6FfsXI56-48",
+          "target": "itQzGqQGjT7w6FfsXI56-54"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-48",
+          "type": "node",
+          "parent": "1",
+          "label": "Kiểm tra kết quả captcha"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-49",
+          "type": "edge",
+          "parent": "1",
+          "source": "itQzGqQGjT7w6FfsXI56-50",
+          "target": "itQzGqQGjT7w6FfsXI56-51"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-50",
+          "type": "node",
+          "parent": "1",
+          "label": "errorCode 06: Không xác thực được Captcha, vui lòng thử lại"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-51",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-52",
+          "type": "edge",
+          "parent": "1",
+          "source": "itQzGqQGjT7w6FfsXI56-54",
+          "target": "itQzGqQGjT7w6FfsXI56-56",
+          "label": "No"
+        },
+        {
+          "id": "wUkn0sS9zsXf8m4e6Go--12",
+          "type": "edge",
+          "parent": "1",
+          "source": "itQzGqQGjT7w6FfsXI56-54"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-54",
+          "type": "node",
+          "parent": "1",
+          "label": "Kiểm tra phản hồi user/pass"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-55",
+          "type": "edge",
+          "parent": "1",
+          "source": "itQzGqQGjT7w6FfsXI56-56",
+          "target": "itQzGqQGjT7w6FfsXI56-57"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-56",
+          "type": "node",
+          "parent": "1",
+          "label": "errorCode 07:&nbsp;Tên đăng nhập hoặc mật khẩu không đúng"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-57",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "itQzGqQGjT7w6FfsXI56-70",
+          "type": "node",
+          "parent": "1",
+          "label": "LUỒNG TỔNG QUÁT NGHIỆP VỤ"
+        },
+        {
+          "id": "juylwtOS7PX6IaT6grYJ-1",
+          "type": "node",
+          "parent": "1",
+          "label": "Bắt buộc id"
+        },
+        {
+          "id": "wUkn0sS9zsXf8m4e6Go--3",
+          "type": "edge",
+          "parent": "1",
+          "source": "juylwtOS7PX6IaT6grYJ-3",
+          "target": "wUkn0sS9zsXf8m4e6Go--2"
+        },
+        {
+          "id": "juylwtOS7PX6IaT6grYJ-3",
+          "type": "node",
+          "parent": "1",
+          "label": "Lấy thông tin trạng thái và ngày đồng bộ mua vào, bán ra"
+        },
+        {
+          "id": "juylwtOS7PX6IaT6grYJ-8",
+          "type": "edge",
+          "parent": "1",
+          "source": "juylwtOS7PX6IaT6grYJ-5",
+          "target": "juylwtOS7PX6IaT6grYJ-7",
+          "label": "No"
+        },
+        {
+          "id": "juylwtOS7PX6IaT6grYJ-12",
+          "type": "edge",
+          "parent": "1",
+          "source": "juylwtOS7PX6IaT6grYJ-5",
+          "target": "juylwtOS7PX6IaT6grYJ-11",
+          "label": "Yes"
+        },
+        {
+          "id": "juylwtOS7PX6IaT6grYJ-5",
+          "type": "node",
+          "parent": "1",
+          "label": "So sánh với ngày đồng bộ mua vào"
+        },
+        {
+          "id": "juylwtOS7PX6IaT6grYJ-10",
+          "type": "edge",
+          "parent": "1",
+          "source": "juylwtOS7PX6IaT6grYJ-7",
+          "target": "juylwtOS7PX6IaT6grYJ-9"
+        },
+        {
+          "id": "juylwtOS7PX6IaT6grYJ-7",
+          "type": "node",
+          "parent": "1",
+          "label": "errorCode 08: Ngày đồng bộ mua vào không được lớn hơn ngày đồng bộ đã khai báo trước đó"
+        },
+        {
+          "id": "juylwtOS7PX6IaT6grYJ-9",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "juylwtOS7PX6IaT6grYJ-14",
+          "type": "edge",
+          "parent": "1",
+          "source": "juylwtOS7PX6IaT6grYJ-11",
+          "target": "juylwtOS7PX6IaT6grYJ-13",
+          "label": "No"
+        },
+        {
+          "id": "juylwtOS7PX6IaT6grYJ-17",
+          "type": "edge",
+          "parent": "1",
+          "source": "juylwtOS7PX6IaT6grYJ-11",
+          "target": "itQzGqQGjT7w6FfsXI56-29",
+          "label": "Yes"
+        },
+        {
+          "id": "juylwtOS7PX6IaT6grYJ-11",
+          "type": "node",
+          "parent": "1",
+          "label": "So sánh ngày đồng bộ bán ra"
+        },
+        {
+          "id": "juylwtOS7PX6IaT6grYJ-16",
+          "type": "edge",
+          "parent": "1",
+          "source": "juylwtOS7PX6IaT6grYJ-13",
+          "target": "juylwtOS7PX6IaT6grYJ-15"
+        },
+        {
+          "id": "juylwtOS7PX6IaT6grYJ-13",
+          "type": "node",
+          "parent": "1",
+          "label": "errorCode 09: Ngày đồng bộ bán ra không được lớn hơn ngày đồng bộ đã khai báo trước đó"
+        },
+        {
+          "id": "juylwtOS7PX6IaT6grYJ-15",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "wUkn0sS9zsXf8m4e6Go--4",
+          "type": "edge",
+          "parent": "1",
+          "source": "wUkn0sS9zsXf8m4e6Go--2",
+          "target": "juylwtOS7PX6IaT6grYJ-5",
+          "label": "Yes"
+        },
+        {
+          "id": "wUkn0sS9zsXf8m4e6Go--7",
+          "type": "edge",
+          "parent": "1",
+          "source": "wUkn0sS9zsXf8m4e6Go--2",
+          "target": "wUkn0sS9zsXf8m4e6Go--6"
+        },
+        {
+          "id": "wUkn0sS9zsXf8m4e6Go--2",
+          "type": "node",
+          "parent": "1",
+          "label": "Kiểm tra có ngày khi trạng thái đồng bộ là true"
+        },
+        {
+          "id": "wUkn0sS9zsXf8m4e6Go--9",
+          "type": "edge",
+          "parent": "1",
+          "source": "wUkn0sS9zsXf8m4e6Go--6",
+          "target": "wUkn0sS9zsXf8m4e6Go--8"
+        },
+        {
+          "id": "wUkn0sS9zsXf8m4e6Go--6",
+          "type": "node",
+          "parent": "1",
+          "label": "Error 10/11"
+        },
+        {
+          "id": "wUkn0sS9zsXf8m4e6Go--8",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "YJ-b-FN4Q7yVI0dLvotM-1",
+          "type": "node",
+          "parent": "1",
+          "label": "Các tham số trạng thái đồng bộ, ngày bắt đầu đồng bộ nếu không truyền vào sẽ không cập nhật gì"
+        }
+      ]
+    },
+    {
+      "id": "JfPkDtYSLJdcCea0h1TS",
+      "name": "Tra cứu hóa đơn",
+      "cells": [
+        {
+          "id": "1",
+          "type": "layer"
+        },
+        {
+          "id": "UX0_Gmc83-CcTaRyY0UH-1",
+          "type": "node",
+          "parent": "1",
+          "label": "GỢI Ý TRA CỨU HÓA ĐƠN"
+        },
+        {
+          "id": "UX0_Gmc83-CcTaRyY0UH-2",
+          "type": "node",
+          "parent": "UX0_Gmc83-CcTaRyY0UH-1",
+          "label": "Khách hàng"
+        },
+        {
+          "id": "UX0_Gmc83-CcTaRyY0UH-10",
+          "type": "node",
+          "parent": "UX0_Gmc83-CcTaRyY0UH-2",
+          "label": "Click tra cứu hóa đơn trên bản ghi danh sách hóa đơn"
+        },
+        {
+          "id": "UX0_Gmc83-CcTaRyY0UH-18",
+          "type": "node",
+          "parent": "UX0_Gmc83-CcTaRyY0UH-2",
+          "label": "Click vào link tra cứu\nđể tra cứu hóa đơn",
+          "html": "Click vào link tra cứu<br>để tra cứu hóa đơn"
+        },
+        {
+          "id": "UX0_Gmc83-CcTaRyY0UH-3",
+          "type": "node",
+          "parent": "UX0_Gmc83-CcTaRyY0UH-1",
+          "label": "Quản trị"
+        },
+        {
+          "id": "UX0_Gmc83-CcTaRyY0UH-7",
+          "type": "edge",
+          "parent": "UX0_Gmc83-CcTaRyY0UH-3",
+          "source": "UX0_Gmc83-CcTaRyY0UH-5",
+          "target": "UX0_Gmc83-CcTaRyY0UH-6"
+        },
+        {
+          "id": "UX0_Gmc83-CcTaRyY0UH-5",
+          "type": "node",
+          "parent": "UX0_Gmc83-CcTaRyY0UH-3",
+          "label": "Start"
+        },
+        {
+          "id": "UX0_Gmc83-CcTaRyY0UH-6",
+          "type": "node",
+          "parent": "UX0_Gmc83-CcTaRyY0UH-3",
+          "label": "Khai báo link tra cứu, trường chứa mã tra cứu theo từng TCGP"
+        },
+        {
+          "id": "UX0_Gmc83-CcTaRyY0UH-4",
+          "type": "node",
+          "parent": "UX0_Gmc83-CcTaRyY0UH-1",
+          "label": "Phần mềm"
+        },
+        {
+          "id": "UX0_Gmc83-CcTaRyY0UH-8",
+          "type": "node",
+          "parent": "UX0_Gmc83-CcTaRyY0UH-4",
+          "label": "Lưu thông tin tra cứu vào CSDl và hiển thị cho NSD"
+        },
+        {
+          "id": "UX0_Gmc83-CcTaRyY0UH-15",
+          "type": "edge",
+          "parent": "UX0_Gmc83-CcTaRyY0UH-4",
+          "source": "UX0_Gmc83-CcTaRyY0UH-12",
+          "target": "UX0_Gmc83-CcTaRyY0UH-14"
+        },
+        {
+          "id": "UX0_Gmc83-CcTaRyY0UH-12",
+          "type": "node",
+          "parent": "UX0_Gmc83-CcTaRyY0UH-4",
+          "label": "Fill mã tra cứu của bản ghi lên form"
+        },
+        {
+          "id": "UX0_Gmc83-CcTaRyY0UH-17",
+          "type": "edge",
+          "parent": "UX0_Gmc83-CcTaRyY0UH-4",
+          "source": "UX0_Gmc83-CcTaRyY0UH-14",
+          "target": "UX0_Gmc83-CcTaRyY0UH-16"
+        },
+        {
+          "id": "UX0_Gmc83-CcTaRyY0UH-14",
+          "type": "node",
+          "parent": "UX0_Gmc83-CcTaRyY0UH-4",
+          "label": "Lấy link tra cứu theo MSTTCGP của bản ghi lên form"
+        },
+        {
+          "id": "UX0_Gmc83-CcTaRyY0UH-16",
+          "type": "node",
+          "parent": "UX0_Gmc83-CcTaRyY0UH-4",
+          "label": "Hiển thị thông tin liên hệ bên bán của bản ghi lên form"
+        },
+        {
+          "id": "UX0_Gmc83-CcTaRyY0UH-23",
+          "type": "edge",
+          "parent": "UX0_Gmc83-CcTaRyY0UH-4",
+          "source": "UX0_Gmc83-CcTaRyY0UH-20",
+          "target": "UX0_Gmc83-CcTaRyY0UH-22"
+        },
+        {
+          "id": "UX0_Gmc83-CcTaRyY0UH-20",
+          "type": "node",
+          "parent": "UX0_Gmc83-CcTaRyY0UH-4",
+          "label": "Chuyển tiếp đến trang tra cứu của TCGP cung cấp"
+        },
+        {
+          "id": "UX0_Gmc83-CcTaRyY0UH-22",
+          "type": "node",
+          "parent": "UX0_Gmc83-CcTaRyY0UH-4",
+          "label": "End"
+        },
+        {
+          "id": "UX0_Gmc83-CcTaRyY0UH-9",
+          "type": "edge",
+          "parent": "UX0_Gmc83-CcTaRyY0UH-1",
+          "source": "UX0_Gmc83-CcTaRyY0UH-6",
+          "target": "UX0_Gmc83-CcTaRyY0UH-8"
+        },
+        {
+          "id": "UX0_Gmc83-CcTaRyY0UH-11",
+          "type": "edge",
+          "parent": "UX0_Gmc83-CcTaRyY0UH-1",
+          "source": "UX0_Gmc83-CcTaRyY0UH-8",
+          "target": "UX0_Gmc83-CcTaRyY0UH-10"
+        },
+        {
+          "id": "UX0_Gmc83-CcTaRyY0UH-13",
+          "type": "edge",
+          "parent": "UX0_Gmc83-CcTaRyY0UH-1",
+          "source": "UX0_Gmc83-CcTaRyY0UH-10",
+          "target": "UX0_Gmc83-CcTaRyY0UH-12"
+        },
+        {
+          "id": "UX0_Gmc83-CcTaRyY0UH-19",
+          "type": "edge",
+          "parent": "UX0_Gmc83-CcTaRyY0UH-1",
+          "source": "UX0_Gmc83-CcTaRyY0UH-16",
+          "target": "UX0_Gmc83-CcTaRyY0UH-18"
+        },
+        {
+          "id": "UX0_Gmc83-CcTaRyY0UH-21",
+          "type": "edge",
+          "parent": "UX0_Gmc83-CcTaRyY0UH-1",
+          "source": "UX0_Gmc83-CcTaRyY0UH-18",
+          "target": "UX0_Gmc83-CcTaRyY0UH-20"
+        }
+      ]
+    },
+    {
+      "id": "qu70X9hwdUJrgnAbk1Wu",
+      "name": "Lấy cấu hình tra cứu",
+      "cells": [
+        {
+          "id": "1",
+          "type": "layer"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-71",
+          "type": "node",
+          "parent": "1",
+          "label": "TÌM KIẾM MÃ TRA CỨU CỦA BẢN GHI",
+          "html": "<b style=\"border-color: var(--border-color);\">TÌM KIẾM MÃ TRA CỨU CỦA BẢN GHI</b>"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-70",
+          "type": "node",
+          "parent": "1",
+          "label": "TÌM KIẾM LINK TRA CỨU CỦA BẢN GHI",
+          "html": "<b>TÌM KIẾM LINK TRA CỨU CỦA BẢN GHI</b>"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-31",
+          "type": "node",
+          "parent": "1",
+          "label": "LẤY THÔNG TIN TCGP",
+          "html": "<b>LẤY THÔNG TIN TCGP</b>"
+        },
+        {
+          "id": "HdKJL_TjPuD6ecUsrmn1-1",
+          "type": "node",
+          "parent": "1",
+          "label": "Luồng đồng bộ mã tra cứu về DB của mSMI"
+        },
+        {
+          "id": "HdKJL_TjPuD6ecUsrmn1-2",
+          "type": "node",
+          "parent": "HdKJL_TjPuD6ecUsrmn1-1",
+          "label": "Tổ chức giải pháp hóa đơn"
+        },
+        {
+          "id": "HdKJL_TjPuD6ecUsrmn1-7",
+          "type": "edge",
+          "parent": "HdKJL_TjPuD6ecUsrmn1-2",
+          "source": "HdKJL_TjPuD6ecUsrmn1-5",
+          "target": "HdKJL_TjPuD6ecUsrmn1-6"
+        },
+        {
+          "id": "HdKJL_TjPuD6ecUsrmn1-5",
+          "type": "node",
+          "parent": "HdKJL_TjPuD6ecUsrmn1-2",
+          "label": "Start"
+        },
+        {
+          "id": "HdKJL_TjPuD6ecUsrmn1-9",
+          "type": "edge",
+          "parent": "HdKJL_TjPuD6ecUsrmn1-2",
+          "source": "HdKJL_TjPuD6ecUsrmn1-6",
+          "target": "HdKJL_TjPuD6ecUsrmn1-8"
+        },
+        {
+          "id": "HdKJL_TjPuD6ecUsrmn1-6",
+          "type": "node",
+          "parent": "HdKJL_TjPuD6ecUsrmn1-2",
+          "label": "Tạo hóa đơn và gán mã tra cứu trong XML hóa đơn"
+        },
+        {
+          "id": "HdKJL_TjPuD6ecUsrmn1-8",
+          "type": "node",
+          "parent": "HdKJL_TjPuD6ecUsrmn1-2",
+          "label": "Gửi dữ liệu XML hóa đơn lên CQT"
+        },
+        {
+          "id": "HdKJL_TjPuD6ecUsrmn1-3",
+          "type": "node",
+          "parent": "HdKJL_TjPuD6ecUsrmn1-1",
+          "label": "SMI"
+        },
+        {
+          "id": "HdKJL_TjPuD6ecUsrmn1-12",
+          "type": "node",
+          "parent": "HdKJL_TjPuD6ecUsrmn1-3",
+          "label": "Định kỳ call lên CQT để đồng bộ dữ liệu"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-2",
+          "type": "edge",
+          "parent": "HdKJL_TjPuD6ecUsrmn1-3",
+          "source": "HdKJL_TjPuD6ecUsrmn1-15",
+          "target": "4KGRnIxJNjhS2unuTg0m-1"
+        },
+        {
+          "id": "HdKJL_TjPuD6ecUsrmn1-15",
+          "type": "node",
+          "parent": "HdKJL_TjPuD6ecUsrmn1-3",
+          "label": "Nhận về thông tin bản ghi hóa đơn chứa MSTTCGP và mã tra cứu (nếu có) và lưu vào CSDL"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-1",
+          "type": "node",
+          "parent": "HdKJL_TjPuD6ecUsrmn1-3",
+          "label": "End"
+        },
+        {
+          "id": "HdKJL_TjPuD6ecUsrmn1-4",
+          "type": "node",
+          "parent": "HdKJL_TjPuD6ecUsrmn1-1",
+          "label": "CQT"
+        },
+        {
+          "id": "HdKJL_TjPuD6ecUsrmn1-10",
+          "type": "node",
+          "parent": "HdKJL_TjPuD6ecUsrmn1-4",
+          "label": "Validate dữ liệu, cấp mã, ký, lưu dữ liệu chưa mã tra cứu vào DB"
+        },
+        {
+          "id": "HdKJL_TjPuD6ecUsrmn1-13",
+          "type": "node",
+          "parent": "HdKJL_TjPuD6ecUsrmn1-4",
+          "label": "Trả ra dữ liệu về đầu phiếu và chi tiết hóa đơn chứa"
+        },
+        {
+          "id": "HdKJL_TjPuD6ecUsrmn1-11",
+          "type": "edge",
+          "parent": "HdKJL_TjPuD6ecUsrmn1-1",
+          "source": "HdKJL_TjPuD6ecUsrmn1-8",
+          "target": "HdKJL_TjPuD6ecUsrmn1-10"
+        },
+        {
+          "id": "HdKJL_TjPuD6ecUsrmn1-14",
+          "type": "edge",
+          "parent": "HdKJL_TjPuD6ecUsrmn1-1",
+          "source": "HdKJL_TjPuD6ecUsrmn1-12",
+          "target": "HdKJL_TjPuD6ecUsrmn1-13"
+        },
+        {
+          "id": "HdKJL_TjPuD6ecUsrmn1-16",
+          "type": "edge",
+          "parent": "HdKJL_TjPuD6ecUsrmn1-1",
+          "source": "HdKJL_TjPuD6ecUsrmn1-13",
+          "target": "HdKJL_TjPuD6ecUsrmn1-15"
+        },
+        {
+          "id": "HdKJL_TjPuD6ecUsrmn1-17",
+          "type": "edge",
+          "parent": "HdKJL_TjPuD6ecUsrmn1-1",
+          "source": "HdKJL_TjPuD6ecUsrmn1-10",
+          "target": "HdKJL_TjPuD6ecUsrmn1-12"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-5",
+          "type": "edge",
+          "parent": "1",
+          "source": "4KGRnIxJNjhS2unuTg0m-3",
+          "target": "4KGRnIxJNjhS2unuTg0m-4"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-3",
+          "type": "node",
+          "parent": "1",
+          "label": "Start"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-7",
+          "type": "edge",
+          "parent": "1",
+          "source": "4KGRnIxJNjhS2unuTg0m-4",
+          "target": "4KGRnIxJNjhS2unuTg0m-6"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-4",
+          "type": "node",
+          "parent": "1",
+          "label": "Kiểm tra thông tin MST TCGP"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-11",
+          "type": "edge",
+          "parent": "1",
+          "source": "4KGRnIxJNjhS2unuTg0m-6",
+          "target": "4KGRnIxJNjhS2unuTg0m-10"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-6",
+          "type": "node",
+          "parent": "1",
+          "label": "Lấy link tra cứu của hóa đơn"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-13",
+          "type": "edge",
+          "parent": "1",
+          "source": "4KGRnIxJNjhS2unuTg0m-10",
+          "target": "4KGRnIxJNjhS2unuTg0m-12"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-10",
+          "type": "node",
+          "parent": "1",
+          "label": "Lấy mã tra cứu của hóa đơn"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-15",
+          "type": "edge",
+          "parent": "1",
+          "source": "4KGRnIxJNjhS2unuTg0m-12",
+          "target": "4KGRnIxJNjhS2unuTg0m-14"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-12",
+          "type": "node",
+          "parent": "1",
+          "label": "Lấy link tải PDF (nếu có)"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-17",
+          "type": "edge",
+          "parent": "1",
+          "source": "4KGRnIxJNjhS2unuTg0m-14",
+          "target": "4KGRnIxJNjhS2unuTg0m-16"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-14",
+          "type": "node",
+          "parent": "1",
+          "label": "Lấy thông tin bên bán"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-16",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-20",
+          "type": "edge",
+          "parent": "1",
+          "source": "4KGRnIxJNjhS2unuTg0m-18",
+          "target": "4KGRnIxJNjhS2unuTg0m-19"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-18",
+          "type": "node",
+          "parent": "1",
+          "label": "Start"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-22",
+          "type": "edge",
+          "parent": "1",
+          "source": "4KGRnIxJNjhS2unuTg0m-19",
+          "target": "4KGRnIxJNjhS2unuTg0m-21"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-19",
+          "type": "node",
+          "parent": "1",
+          "label": "Lấy MST TCGP của bản ghi"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-24",
+          "type": "edge",
+          "parent": "1",
+          "source": "4KGRnIxJNjhS2unuTg0m-21",
+          "target": "4KGRnIxJNjhS2unuTg0m-23",
+          "label": "No"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-26",
+          "type": "edge",
+          "parent": "1",
+          "source": "4KGRnIxJNjhS2unuTg0m-21",
+          "target": "4KGRnIxJNjhS2unuTg0m-25",
+          "label": "Yes"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-21",
+          "type": "node",
+          "parent": "1",
+          "label": "Có giá trị?"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-30",
+          "type": "edge",
+          "parent": "1",
+          "source": "4KGRnIxJNjhS2unuTg0m-23",
+          "target": "4KGRnIxJNjhS2unuTg0m-29"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-23",
+          "type": "node",
+          "parent": "1",
+          "label": "Lấy thông tin tvandnkntt trong header",
+          "html": "Lấy thông tin&nbsp;<b>tvandnkntt</b> trong header"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-73",
+          "type": "edge",
+          "parent": "1",
+          "source": "4KGRnIxJNjhS2unuTg0m-25",
+          "target": "4KGRnIxJNjhS2unuTg0m-72"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-25",
+          "type": "node",
+          "parent": "1",
+          "label": "Lấy MST của NBan"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-33",
+          "type": "edge",
+          "parent": "1",
+          "source": "4KGRnIxJNjhS2unuTg0m-27",
+          "target": "4KGRnIxJNjhS2unuTg0m-32"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-27",
+          "type": "node",
+          "parent": "1",
+          "label": "Tìm kiếm link tra cứu trong bảng cấu hình theo MST TCGP và MST NBan"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-56",
+          "type": "edge",
+          "parent": "1",
+          "source": "4KGRnIxJNjhS2unuTg0m-29",
+          "target": "4KGRnIxJNjhS2unuTg0m-25"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-29",
+          "type": "node",
+          "parent": "1",
+          "label": "Gán MST TCGP = tvandnkntt",
+          "html": "Gán MST TCGP = <b>tvandnkntt</b>"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-35",
+          "type": "edge",
+          "parent": "1",
+          "source": "4KGRnIxJNjhS2unuTg0m-32",
+          "target": "4KGRnIxJNjhS2unuTg0m-34",
+          "label": "Yes"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-37",
+          "type": "edge",
+          "parent": "1",
+          "source": "4KGRnIxJNjhS2unuTg0m-32",
+          "target": "4KGRnIxJNjhS2unuTg0m-36",
+          "label": "No"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-32",
+          "type": "node",
+          "parent": "1",
+          "label": "Có giá trị?"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-57",
+          "type": "edge",
+          "parent": "1",
+          "source": "4KGRnIxJNjhS2unuTg0m-34",
+          "target": "4KGRnIxJNjhS2unuTg0m-46"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-34",
+          "type": "node",
+          "parent": "1",
+          "label": "Lấy được link tra cứu"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-39",
+          "type": "edge",
+          "parent": "1",
+          "source": "4KGRnIxJNjhS2unuTg0m-36",
+          "target": "4KGRnIxJNjhS2unuTg0m-38"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-36",
+          "type": "node",
+          "parent": "1",
+          "label": "Tìm kiếm link tra cứu&nbsp; trong bảng cấu hình theo MST TCGP và MST NBan null"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-41",
+          "type": "edge",
+          "parent": "1",
+          "source": "4KGRnIxJNjhS2unuTg0m-38",
+          "target": "4KGRnIxJNjhS2unuTg0m-40",
+          "label": "No"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-45",
+          "type": "edge",
+          "parent": "1",
+          "source": "4KGRnIxJNjhS2unuTg0m-38",
+          "target": "4KGRnIxJNjhS2unuTg0m-44",
+          "label": "Yes"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-38",
+          "type": "node",
+          "parent": "1",
+          "label": "Có giá trị?"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-43",
+          "type": "edge",
+          "parent": "1",
+          "source": "4KGRnIxJNjhS2unuTg0m-40",
+          "target": "4KGRnIxJNjhS2unuTg0m-42"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-40",
+          "type": "node",
+          "parent": "1",
+          "label": "Hiển thị thông báo Không có link tra cứu"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-42",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-47",
+          "type": "edge",
+          "parent": "1",
+          "source": "4KGRnIxJNjhS2unuTg0m-44",
+          "target": "4KGRnIxJNjhS2unuTg0m-46"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-44",
+          "type": "node",
+          "parent": "1",
+          "label": "Lấy tất cả các link tra cứu 1, link tra cứu 2 thỏa mãn điều kiện"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-49",
+          "type": "edge",
+          "parent": "1",
+          "source": "4KGRnIxJNjhS2unuTg0m-46",
+          "target": "4KGRnIxJNjhS2unuTg0m-48"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-46",
+          "type": "node",
+          "parent": "1",
+          "label": "Tìm kiếm mã tra cứu\ntại vùng thông tin khác theo bản ghi link tra cứu vừa tìm được",
+          "html": "Tìm kiếm mã tra cứu<br>tại vùng thông tin khác theo bản ghi link tra cứu vừa tìm được&nbsp;"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-51",
+          "type": "edge",
+          "parent": "1",
+          "source": "4KGRnIxJNjhS2unuTg0m-48",
+          "target": "4KGRnIxJNjhS2unuTg0m-50",
+          "label": "No"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-55",
+          "type": "edge",
+          "parent": "1",
+          "source": "4KGRnIxJNjhS2unuTg0m-48",
+          "target": "4KGRnIxJNjhS2unuTg0m-62"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-48",
+          "type": "node",
+          "parent": "1",
+          "label": "Có giá trị?"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-59",
+          "type": "edge",
+          "parent": "1",
+          "source": "4KGRnIxJNjhS2unuTg0m-50",
+          "target": "4KGRnIxJNjhS2unuTg0m-58"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-50",
+          "type": "node",
+          "parent": "1",
+          "label": "Tìm kiếm mã tra cứu gán tay vào được lưu trong DB"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-61",
+          "type": "edge",
+          "parent": "1",
+          "source": "4KGRnIxJNjhS2unuTg0m-58",
+          "target": "4KGRnIxJNjhS2unuTg0m-60"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-63",
+          "type": "edge",
+          "parent": "1",
+          "source": "4KGRnIxJNjhS2unuTg0m-58",
+          "target": "4KGRnIxJNjhS2unuTg0m-62"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-58",
+          "type": "node",
+          "parent": "1",
+          "label": "Có giá trị ?"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-60",
+          "type": "node",
+          "parent": "1",
+          "label": "Hiển thị thông báo: \"Không có mã tra cứu trong dữ liệu, vui lòng liên hệ người bán để được cung cấp\""
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-65",
+          "type": "edge",
+          "parent": "1",
+          "source": "4KGRnIxJNjhS2unuTg0m-62"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-62",
+          "type": "node",
+          "parent": "1",
+          "label": "Fill giá trị mã tra cứu vào link tra cứu 1, 2"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-69",
+          "type": "edge",
+          "parent": "1",
+          "source": "4KGRnIxJNjhS2unuTg0m-66",
+          "target": "4KGRnIxJNjhS2unuTg0m-68"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-66",
+          "type": "node",
+          "parent": "1",
+          "label": "Hiển thị kết quả đầy đủ cho Người sử dụng"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-68",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-74",
+          "type": "edge",
+          "parent": "1",
+          "source": "4KGRnIxJNjhS2unuTg0m-72",
+          "target": "4KGRnIxJNjhS2unuTg0m-27"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-72",
+          "type": "node",
+          "parent": "1",
+          "label": "Lấy thông tin bên bán của hóa đơn"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-75",
+          "type": "node",
+          "parent": "1",
+          "label": "Hiển thị các thông tin này nếu có\n- Tên đơn vị bán\n- Mã số thuế(có thêm icon copy để copy nhanh)\n- Số điện thoại\n- Email\n- Mã cơ quan thuế",
+          "html": "Hiển thị các thông tin này nếu có<br>- Tên đơn vị bán<br>- Mã số thuế(có thêm icon copy để copy nhanh)<br>- Số điện thoại<br>- Email<br>- Mã cơ quan thuế"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-76",
+          "type": "node",
+          "parent": "1",
+          "label": "LUỒNG TỔNG QUÁT LẤY LINK VÀ MÃ CQT"
+        },
+        {
+          "id": "4KGRnIxJNjhS2unuTg0m-77",
+          "type": "node",
+          "parent": "1",
+          "label": "LUỒNG CHI TIẾT LẤY MÃ VÀ LINK TRA CỨU"
+        }
+      ]
+    },
+    {
+      "id": "56y2Jyn0abag_9u7yCAP",
+      "name": "Lấy trạng thái hóa đơn từ CQT",
+      "cells": [
+        {
+          "id": "1",
+          "type": "layer"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-66",
+          "type": "node",
+          "parent": "1",
+          "label": "TRẢ DỮ LIỆU VỀ PHẦN MỀM HÓA ĐƠN",
+          "html": "<b>TRẢ DỮ LIỆU VỀ PHẦN MỀM HÓA ĐƠN</b>"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-63",
+          "type": "node",
+          "parent": "1",
+          "label": "LẤY TRẠNG THÁI HÓA ĐƠN TỪ CQT"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-62",
+          "type": "node",
+          "parent": "1",
+          "label": "LẤY ckey VÀ cvalue CỦA CAPTCHA"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-61",
+          "type": "node",
+          "parent": "1",
+          "label": "NHẬN VÀ KIỂM TRA REQEST TỪ PHẦN MỀM HÓA ĐƠN GỬI LÊN",
+          "html": "<b>NHẬN VÀ KIỂM TRA REQEST TỪ PHẦN MỀM HÓA ĐƠN GỬI LÊN</b>"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-17",
+          "type": "edge",
+          "parent": "1",
+          "source": "tKCQAUYSDG7kNh02UMCT-1",
+          "target": "zdjkW9ckAHYurSDIlqoe-16"
+        },
+        {
+          "id": "tKCQAUYSDG7kNh02UMCT-1",
+          "type": "node",
+          "parent": "1",
+          "label": "Start"
+        },
+        {
+          "id": "tKCQAUYSDG7kNh02UMCT-5",
+          "type": "edge",
+          "parent": "1",
+          "source": "tKCQAUYSDG7kNh02UMCT-2",
+          "target": "tKCQAUYSDG7kNh02UMCT-4"
+        },
+        {
+          "id": "tKCQAUYSDG7kNh02UMCT-2",
+          "type": "node",
+          "parent": "1",
+          "label": "Lấy Captcha từ cơ quan thuế về đọc"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-20",
+          "type": "edge",
+          "parent": "1",
+          "source": "tKCQAUYSDG7kNh02UMCT-4",
+          "target": "zdjkW9ckAHYurSDIlqoe-19"
+        },
+        {
+          "id": "tKCQAUYSDG7kNh02UMCT-4",
+          "type": "node",
+          "parent": "1",
+          "label": "Truyền thông tin hóa đơn lên CQT để lấy trạng thái hóa đơn"
+        },
+        {
+          "id": "tKCQAUYSDG7kNh02UMCT-8",
+          "type": "node",
+          "parent": "1",
+          "label": "LUỒNG TỔNG HỢP API LẤY TRẠNG THÁI HÓA ĐƠN TỪ CQT"
+        },
+        {
+          "id": "tKCQAUYSDG7kNh02UMCT-9",
+          "type": "node",
+          "parent": "1",
+          "label": "LUỒNG CHI TIẾT API LẤY TRẠNG THÁI HÓA ĐƠN TỪ CQT"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-52",
+          "type": "edge",
+          "parent": "1",
+          "source": "tKCQAUYSDG7kNh02UMCT-10",
+          "target": "zdjkW9ckAHYurSDIlqoe-51"
+        },
+        {
+          "id": "tKCQAUYSDG7kNh02UMCT-10",
+          "type": "node",
+          "parent": "1",
+          "label": "START"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-3",
+          "type": "edge",
+          "parent": "1",
+          "source": "tKCQAUYSDG7kNh02UMCT-11",
+          "target": "zdjkW9ckAHYurSDIlqoe-2"
+        },
+        {
+          "id": "tKCQAUYSDG7kNh02UMCT-11",
+          "type": "node",
+          "parent": "1",
+          "label": "Call API của CQT để lấy CAPTCHA"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-1",
+          "type": "node",
+          "parent": "1",
+          "label": "API: https://hoadondientu.gdt.gov.vn:30000/captcha\nMethod: GET",
+          "html": "API:&nbsp;https://hoadondientu.gdt.gov.vn:30000/captcha<br>Method: GET"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-5",
+          "type": "edge",
+          "parent": "1",
+          "source": "zdjkW9ckAHYurSDIlqoe-2",
+          "target": "zdjkW9ckAHYurSDIlqoe-4",
+          "label": "&lt;&gt; 200"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-7",
+          "type": "edge",
+          "parent": "1",
+          "source": "zdjkW9ckAHYurSDIlqoe-2",
+          "target": "zdjkW9ckAHYurSDIlqoe-6",
+          "label": "200"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-2",
+          "type": "node",
+          "parent": "1",
+          "label": "Kiểm tra http code"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-50",
+          "type": "edge",
+          "parent": "1",
+          "source": "zdjkW9ckAHYurSDIlqoe-4",
+          "target": "zdjkW9ckAHYurSDIlqoe-49"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-4",
+          "type": "node",
+          "parent": "1",
+          "label": "code: \"02\"\nmessage: Trang web TCT gián đoạn, vui lòng thử lại sau",
+          "html": "code: \"02\"<br style=\"border-color: var(--border-color);\">message: Trang web TCT gián đoạn, vui lòng thử lại sau"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-11",
+          "type": "edge",
+          "parent": "1",
+          "source": "zdjkW9ckAHYurSDIlqoe-6",
+          "target": "zdjkW9ckAHYurSDIlqoe-10"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-6",
+          "type": "node",
+          "parent": "1",
+          "label": "Nhận được ckey và content chứa hình ảnh CAPTCHA"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-13",
+          "type": "edge",
+          "parent": "1",
+          "source": "zdjkW9ckAHYurSDIlqoe-10",
+          "target": "zdjkW9ckAHYurSDIlqoe-12"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-10",
+          "type": "node",
+          "parent": "1",
+          "label": "Chuyển content từ dạng svg về hình ảnh"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-15",
+          "type": "edge",
+          "parent": "1",
+          "source": "zdjkW9ckAHYurSDIlqoe-12",
+          "target": "zdjkW9ckAHYurSDIlqoe-14"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-12",
+          "type": "node",
+          "parent": "1",
+          "label": "Đọc dữ liệu hình ảnh để lấy value của CAPTCHA"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-27",
+          "type": "edge",
+          "parent": "1",
+          "source": "zdjkW9ckAHYurSDIlqoe-14",
+          "target": "zdjkW9ckAHYurSDIlqoe-26"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-14",
+          "type": "node",
+          "parent": "1",
+          "label": "Call lên CQT để lấy trạng thái hóa đơn"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-18",
+          "type": "edge",
+          "parent": "1",
+          "source": "zdjkW9ckAHYurSDIlqoe-16",
+          "target": "tKCQAUYSDG7kNh02UMCT-2"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-16",
+          "type": "node",
+          "parent": "1",
+          "label": "Tiếp nhận request từ phần mềm hóa đơn gửi lên"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-22",
+          "type": "edge",
+          "parent": "1",
+          "source": "zdjkW9ckAHYurSDIlqoe-19",
+          "target": "zdjkW9ckAHYurSDIlqoe-21"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-19",
+          "type": "node",
+          "parent": "1",
+          "label": "Trả lại response cho phần mềm hóa đơn"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-21",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-25",
+          "type": "node",
+          "parent": "1",
+          "label": "Truyền lên \nckey, \ncvalue \nvà thông tin hóa đơn",
+          "html": "Truyền lên <br>ckey, <br>cvalue <br>và thông tin hóa đơn"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-31",
+          "type": "edge",
+          "parent": "1",
+          "source": "zdjkW9ckAHYurSDIlqoe-26",
+          "target": "zdjkW9ckAHYurSDIlqoe-30",
+          "label": "200"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-40",
+          "type": "edge",
+          "parent": "1",
+          "source": "zdjkW9ckAHYurSDIlqoe-26",
+          "target": "zdjkW9ckAHYurSDIlqoe-39",
+          "label": "&lt;&gt; 200"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-26",
+          "type": "node",
+          "parent": "1",
+          "label": "Kiểm tra http code"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-74",
+          "type": "edge",
+          "parent": "1",
+          "source": "zdjkW9ckAHYurSDIlqoe-30",
+          "target": "zdjkW9ckAHYurSDIlqoe-71"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-30",
+          "type": "node",
+          "parent": "1",
+          "label": "Nhận và xử lý thông tin TCT trả về"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-38",
+          "type": "edge",
+          "parent": "1",
+          "source": "zdjkW9ckAHYurSDIlqoe-34",
+          "target": "zdjkW9ckAHYurSDIlqoe-37"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-34",
+          "type": "node",
+          "parent": "1",
+          "label": "Bóc tách response của thuế lấy trường tthai và trả về phần mềm hóa đơn"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-37",
+          "type": "node",
+          "parent": "1",
+          "label": "END"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-41",
+          "type": "edge",
+          "parent": "1",
+          "source": "zdjkW9ckAHYurSDIlqoe-39",
+          "target": "tKCQAUYSDG7kNh02UMCT-11",
+          "label": "401 Authorized\nRetry 5 lần",
+          "html": "401 Authorized<br>Retry 5 lần"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-43",
+          "type": "edge",
+          "parent": "1",
+          "source": "zdjkW9ckAHYurSDIlqoe-39",
+          "target": "zdjkW9ckAHYurSDIlqoe-42",
+          "label": "500"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-64",
+          "type": "edge",
+          "parent": "1",
+          "source": "zdjkW9ckAHYurSDIlqoe-39",
+          "target": "zdjkW9ckAHYurSDIlqoe-47"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-65",
+          "type": "node",
+          "parent": "zdjkW9ckAHYurSDIlqoe-64",
+          "label": "Sau 5 lần\nRetry",
+          "html": "Sau 5 lần<br>Retry"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-39",
+          "type": "node",
+          "parent": "1",
+          "label": "Chi tiết http code"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-45",
+          "type": "edge",
+          "parent": "1",
+          "source": "zdjkW9ckAHYurSDIlqoe-42",
+          "target": "zdjkW9ckAHYurSDIlqoe-44"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-42",
+          "type": "node",
+          "parent": "1",
+          "label": "code: \"02\"\nmessage: Trang web TCT gián đoạn, vui lòng thử lại sau",
+          "html": "code: \"02\"<br>message: Trang web TCT gián đoạn, vui lòng thử lại sau"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-44",
+          "type": "node",
+          "parent": "1",
+          "label": "END"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-46",
+          "type": "edge",
+          "parent": "1",
+          "source": "zdjkW9ckAHYurSDIlqoe-47",
+          "target": "zdjkW9ckAHYurSDIlqoe-44"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-47",
+          "type": "node",
+          "parent": "1",
+          "label": "- code: \"03\"\n- message: Không xác thực được CAPTCHA, vui lòng thử lại",
+          "html": "- code: \"03\"<br>- message: Không xác thực được CAPTCHA, vui lòng thử lại"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-49",
+          "type": "node",
+          "parent": "1",
+          "label": "END"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-54",
+          "type": "edge",
+          "parent": "1",
+          "source": "zdjkW9ckAHYurSDIlqoe-51",
+          "target": "zdjkW9ckAHYurSDIlqoe-53"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-51",
+          "type": "node",
+          "parent": "1",
+          "label": "Nhận request từ app hóa đơn gửi lên"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-55",
+          "type": "edge",
+          "parent": "1",
+          "source": "zdjkW9ckAHYurSDIlqoe-53",
+          "target": "tKCQAUYSDG7kNh02UMCT-11",
+          "label": "Yes"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-57",
+          "type": "edge",
+          "parent": "1",
+          "source": "zdjkW9ckAHYurSDIlqoe-53",
+          "target": "zdjkW9ckAHYurSDIlqoe-56",
+          "label": "No"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-53",
+          "type": "node",
+          "parent": "1",
+          "label": "Kiểm tra thông tin bắt buộc"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-59",
+          "type": "edge",
+          "parent": "1",
+          "source": "zdjkW9ckAHYurSDIlqoe-56",
+          "target": "zdjkW9ckAHYurSDIlqoe-58"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-56",
+          "type": "node",
+          "parent": "1",
+          "label": "code: \"01\"\nmessage: Cần truyền đủ thông tin MST, ký hiệu mẫu số, ký hiệu, số hóa đơn và tổng tiền thanh toán",
+          "html": "code: \"01\"<br>message: Cần truyền đủ thông tin MST, ký hiệu mẫu số, ký hiệu, số hóa đơn và tổng tiền thanh toán"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-58",
+          "type": "node",
+          "parent": "1",
+          "label": "END"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-60",
+          "type": "node",
+          "parent": "1",
+          "label": "Phải truyền đủ:\nMST bên bán\nKý hiệu mẫu số\nKý hiệu hóa đơn\nSố hóa đơn\nTổng tiền thanh toán",
+          "html": "Phải truyền đủ:<br>MST bên bán<br>Ký hiệu mẫu số<br>Ký hiệu hóa đơn<br>Số hóa đơn<br>Tổng tiền thanh toán"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-67",
+          "type": "node",
+          "parent": "1",
+          "label": "API LẤY TRẠNG THÁI HÓA ĐƠN TỪ CQT"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-68",
+          "type": "node",
+          "parent": "1",
+          "label": "{\n    \"code\": \"00\",\n    \"message\": \"Thành công\",\n    \"tthai\": ...\n}",
+          "html": "<div>{</div><div>&nbsp; &nbsp; \"code\": \"00\",</div><div>&nbsp; &nbsp; \"message\": \"Thành công\",</div><div>&nbsp; &nbsp; \"tthai\": ...</div><div>}</div>"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-73",
+          "type": "edge",
+          "parent": "1",
+          "source": "zdjkW9ckAHYurSDIlqoe-71",
+          "target": "zdjkW9ckAHYurSDIlqoe-72",
+          "label": "No"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-75",
+          "type": "edge",
+          "parent": "1",
+          "source": "zdjkW9ckAHYurSDIlqoe-71",
+          "target": "zdjkW9ckAHYurSDIlqoe-34",
+          "label": "yes"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-71",
+          "type": "node",
+          "parent": "1",
+          "label": "Response có dữ liệu không?"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-77",
+          "type": "edge",
+          "parent": "1",
+          "source": "zdjkW9ckAHYurSDIlqoe-72",
+          "target": "zdjkW9ckAHYurSDIlqoe-76"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-72",
+          "type": "node",
+          "parent": "1",
+          "label": "code: \"04\"\nmessage: Không tồn tại hóa đơn có thông tin trùng khớp với các thông tin tổ chức, cá nhân tìm kiếm",
+          "html": "code: \"04\"<br>message:&nbsp;Không tồn tại hóa đơn có thông tin trùng khớp với các thông tin tổ chức, cá nhân tìm kiếm"
+        },
+        {
+          "id": "zdjkW9ckAHYurSDIlqoe-76",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        }
+      ]
+    },
+    {
+      "id": "2bIqp3gI5KuTvCbn9JNX",
+      "name": "Lấy dữ liệu tờ khai",
+      "cells": [
+        {
+          "id": "1",
+          "type": "layer"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-3",
+          "type": "edge",
+          "parent": "1",
+          "source": "7rn4F-UZxyT-PvqsJi0s-1",
+          "target": "7rn4F-UZxyT-PvqsJi0s-2"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-1",
+          "type": "node",
+          "parent": "1",
+          "label": "Start"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-5",
+          "type": "edge",
+          "parent": "1",
+          "source": "7rn4F-UZxyT-PvqsJi0s-2",
+          "target": "7rn4F-UZxyT-PvqsJi0s-4"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-2",
+          "type": "node",
+          "parent": "1",
+          "label": "Lấy danh sách hóa đơn theo điều kiện"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-7",
+          "type": "edge",
+          "parent": "1",
+          "source": "7rn4F-UZxyT-PvqsJi0s-4",
+          "target": "7rn4F-UZxyT-PvqsJi0s-6"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-4",
+          "type": "node",
+          "parent": "1",
+          "label": "Quy đổi giá trị sang VND"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-9",
+          "type": "edge",
+          "parent": "1",
+          "source": "7rn4F-UZxyT-PvqsJi0s-6",
+          "target": "7rn4F-UZxyT-PvqsJi0s-8"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-6",
+          "type": "node",
+          "parent": "1",
+          "label": "Cộng lại các giá trị tổng tiền trước thuế, tổng tiền thanh toán, tiền thuế"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-11",
+          "type": "edge",
+          "parent": "1",
+          "source": "7rn4F-UZxyT-PvqsJi0s-8",
+          "target": "7rn4F-UZxyT-PvqsJi0s-10"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-8",
+          "type": "node",
+          "parent": "1",
+          "label": "Hiển thị lên dữ liệu tờ khai"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-10",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-12",
+          "type": "edge",
+          "parent": "1",
+          "source": "7rn4F-UZxyT-PvqsJi0s-13",
+          "target": "7rn4F-UZxyT-PvqsJi0s-15"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-13",
+          "type": "node",
+          "parent": "1",
+          "label": "Start"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-26",
+          "type": "edge",
+          "parent": "1",
+          "source": "7rn4F-UZxyT-PvqsJi0s-15",
+          "target": "7rn4F-UZxyT-PvqsJi0s-25"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-15",
+          "type": "node",
+          "parent": "1",
+          "label": "lấy danh sách hóa đơn theo điều kiện"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-35",
+          "type": "edge",
+          "parent": "1",
+          "source": "7rn4F-UZxyT-PvqsJi0s-17",
+          "target": "7rn4F-UZxyT-PvqsJi0s-34"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-17",
+          "type": "node",
+          "parent": "1",
+          "label": "Quy đổi giá trị sang VND"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-18",
+          "type": "edge",
+          "parent": "1",
+          "source": "7rn4F-UZxyT-PvqsJi0s-19",
+          "target": "7rn4F-UZxyT-PvqsJi0s-21"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-19",
+          "type": "node",
+          "parent": "1",
+          "label": "Cộng lại các giá trị tổng tiền trước thuế, tổng tiền thanh toán, tiền thuế"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-20",
+          "type": "edge",
+          "parent": "1",
+          "source": "7rn4F-UZxyT-PvqsJi0s-21",
+          "target": "7rn4F-UZxyT-PvqsJi0s-22"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-21",
+          "type": "node",
+          "parent": "1",
+          "label": "Hiển thị lên dữ liệu tờ khai"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-22",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-23",
+          "type": "node",
+          "parent": "1",
+          "label": "Luồng nghiệp vụ lấy thông tin hóa đơn mua vào/bán ra lên tờ khai"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-24",
+          "type": "node",
+          "parent": "1",
+          "label": "Luồng nghiệp vụ lấy thông tin hóa đơn mua vào/bán ra lên tờ khai chi tiết"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-28",
+          "type": "edge",
+          "parent": "1",
+          "source": "7rn4F-UZxyT-PvqsJi0s-25",
+          "target": "7rn4F-UZxyT-PvqsJi0s-27"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-25",
+          "type": "node",
+          "parent": "1",
+          "label": "Xác định kỳ lấy dữ liệu(tháng/quý)"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-30",
+          "type": "edge",
+          "parent": "1",
+          "source": "7rn4F-UZxyT-PvqsJi0s-27",
+          "target": "7rn4F-UZxyT-PvqsJi0s-29"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-27",
+          "type": "node",
+          "parent": "1",
+          "label": "Xác định tiêu thức lấy hóa đơn(theo ngày lập hay hay ngày kê khai)"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-32",
+          "type": "edge",
+          "parent": "1",
+          "source": "7rn4F-UZxyT-PvqsJi0s-29",
+          "target": "7rn4F-UZxyT-PvqsJi0s-31"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-29",
+          "type": "node",
+          "parent": "1",
+          "label": "Xác định loại hóa đơn cần lấy(chỉ lấy hóa đơn GTGT)"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-33",
+          "type": "edge",
+          "parent": "1",
+          "source": "7rn4F-UZxyT-PvqsJi0s-31",
+          "target": "7rn4F-UZxyT-PvqsJi0s-17"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-31",
+          "type": "node",
+          "parent": "1",
+          "label": "Xác định trang thái hóa đơn cần lấy(hóa đơn mới, hóa đơn điều chỉnh, hóa đơn thay thế, hóa đơn bị điều chỉnh)"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-37",
+          "type": "edge",
+          "parent": "1",
+          "source": "7rn4F-UZxyT-PvqsJi0s-34",
+          "target": "7rn4F-UZxyT-PvqsJi0s-36"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-34",
+          "type": "node",
+          "parent": "1",
+          "label": "ngoại tệ sang VND"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-36",
+          "type": "node",
+          "parent": "1",
+          "label": "VND nhưng sai tỷ giá(chỉ cần gặp VND, VNĐ thì tỷ giá lấy mặc định là 1)"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-39",
+          "type": "edge",
+          "parent": "1",
+          "source": "7rn4F-UZxyT-PvqsJi0s-36",
+          "target": "7rn4F-UZxyT-PvqsJi0s-19"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-40",
+          "type": "edge",
+          "parent": "1",
+          "source": "7rn4F-UZxyT-PvqsJi0s-41",
+          "target": "7rn4F-UZxyT-PvqsJi0s-43"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-41",
+          "type": "node",
+          "parent": "1",
+          "label": "Start"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-54",
+          "type": "edge",
+          "parent": "1",
+          "source": "7rn4F-UZxyT-PvqsJi0s-43",
+          "target": "7rn4F-UZxyT-PvqsJi0s-53"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-43",
+          "type": "node",
+          "parent": "1",
+          "label": "Lấy danh sách hóa đơn theo điều kiện"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-44",
+          "type": "edge",
+          "parent": "1",
+          "source": "7rn4F-UZxyT-PvqsJi0s-45",
+          "target": "7rn4F-UZxyT-PvqsJi0s-47"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-45",
+          "type": "node",
+          "parent": "1",
+          "label": "Quy đổi giá trị sang VND(người dùng tự thực hiện trên file excel)"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-60",
+          "type": "edge",
+          "parent": "1",
+          "source": "7rn4F-UZxyT-PvqsJi0s-47",
+          "target": "7rn4F-UZxyT-PvqsJi0s-50"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-47",
+          "type": "node",
+          "parent": "1",
+          "label": "Cộng lại các giá trị tổng tiền trước thuế, tổng tiền thanh toán, tiền thuế"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-50",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-52",
+          "type": "node",
+          "parent": "1",
+          "label": "Luồng nghiệp vụ lấy thông tin báo cáo để so sánh"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-56",
+          "type": "edge",
+          "parent": "1",
+          "source": "7rn4F-UZxyT-PvqsJi0s-53",
+          "target": "7rn4F-UZxyT-PvqsJi0s-55"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-53",
+          "type": "node",
+          "parent": "1",
+          "label": "Lấy hóa đơn theo tiêu thức ngày lập/ ngày kê khai"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-58",
+          "type": "edge",
+          "parent": "1",
+          "source": "7rn4F-UZxyT-PvqsJi0s-55",
+          "target": "7rn4F-UZxyT-PvqsJi0s-57"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-55",
+          "type": "node",
+          "parent": "1",
+          "label": "Chọn loại hóa đơn (chỉ lấy hóa đơn GTGT)"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-62",
+          "type": "edge",
+          "parent": "1",
+          "source": "7rn4F-UZxyT-PvqsJi0s-57",
+          "target": "7rn4F-UZxyT-PvqsJi0s-61"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-57",
+          "type": "node",
+          "parent": "1",
+          "label": "Trạng thái hóa đơn\n(hóa đơn mới, hóa đơn điều chỉnh, hóa đơn thay thế, hóa đơn bị điều chỉnh\n)",
+          "html": "Trạng thái hóa đơn<br>(hóa đơn mới, hóa đơn điều chỉnh, hóa đơn thay thế, hóa đơn bị điều chỉnh<br>)"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-63",
+          "type": "edge",
+          "parent": "1",
+          "source": "7rn4F-UZxyT-PvqsJi0s-61",
+          "target": "7rn4F-UZxyT-PvqsJi0s-45"
+        },
+        {
+          "id": "7rn4F-UZxyT-PvqsJi0s-61",
+          "type": "node",
+          "parent": "1",
+          "label": "Kết xuất file excel"
+        }
+      ]
+    },
+    {
+      "id": "0EbKr4mny6PR7akTAiEB",
+      "name": "Đồng bộ email mới có file zip",
+      "cells": [
+        {
+          "id": "1",
+          "type": "layer"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-1",
+          "type": "node",
+          "parent": "1",
+          "label": "VALIDATE DỮ LIỆU - TIẾN HÀNH SONG SONG",
+          "html": "<b>VALIDATE DỮ LIỆU - TIẾN HÀNH SONG SONG</b>"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-2",
+          "type": "edge",
+          "parent": "1",
+          "source": "8xQizgP8D05e8BYIR2k6-3",
+          "target": "8xQizgP8D05e8BYIR2k6-5"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-3",
+          "type": "node",
+          "parent": "1",
+          "label": "Start"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-29",
+          "type": "edge",
+          "parent": "1",
+          "source": "8xQizgP8D05e8BYIR2k6-5",
+          "target": "8xQizgP8D05e8BYIR2k6-28"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-5",
+          "type": "node",
+          "parent": "1",
+          "label": "(google api và imap)Quét hộp thư đến, spam\n(tìm email có file đính kèm pdf -xml) \ntừ ngày- đến ngày",
+          "html": "(google api và imap)Quét hộp thư đến, spam<br>(tìm email có file đính kèm pdf -xml) <br>từ ngày- đến ngày"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-7",
+          "type": "node",
+          "parent": "1",
+          "label": "Kiểm tra mst người mua trên XML và MST của tài khoản thuế"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-8",
+          "type": "node",
+          "parent": "1",
+          "label": "Luồng đồng bộ email hóa đơn đầu vào:"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-9",
+          "type": "node",
+          "parent": "1",
+          "label": "So sánh ngày ký và ngày hiệu lực của chứng thư số"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-10",
+          "type": "node",
+          "parent": "1",
+          "label": "So sánh ngày ký hóa đơn và ngày CQT cấp mã (Hóa đơn có mã)"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-11",
+          "type": "node",
+          "parent": "1",
+          "label": "Kiểm tra thẻ mã CQT đối với Hóa đơn có mã"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-12",
+          "type": "edge",
+          "parent": "1",
+          "source": "8xQizgP8D05e8BYIR2k6-13",
+          "target": "8xQizgP8D05e8BYIR2k6-15"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-13",
+          "type": "node",
+          "parent": "1",
+          "label": "Check trùng bộ key hóa đơn"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-14",
+          "type": "edge",
+          "parent": "1",
+          "source": "8xQizgP8D05e8BYIR2k6-15",
+          "target": "8xQizgP8D05e8BYIR2k6-19"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-15",
+          "type": "node",
+          "parent": "1",
+          "label": "Set nguồn đồng bộ cho dữ liệu"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-16",
+          "type": "node",
+          "parent": "1",
+          "label": "Kiểm tra tên đơn vị mua vào"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-17",
+          "type": "node",
+          "parent": "1",
+          "label": "Kiểm tra tính toàn vẹn file XML"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-18",
+          "type": "edge",
+          "parent": "1",
+          "source": "8xQizgP8D05e8BYIR2k6-19",
+          "target": "8xQizgP8D05e8BYIR2k6-21"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-19",
+          "type": "node",
+          "parent": "1",
+          "label": "Lưu thông tin hóa đơn vào CSDL"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-20",
+          "type": "edge",
+          "parent": "1",
+          "source": "8xQizgP8D05e8BYIR2k6-21",
+          "target": "8xQizgP8D05e8BYIR2k6-22"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-21",
+          "type": "node",
+          "parent": "1",
+          "label": "Lưu file XML, PDF hóa đơn vào CSDL"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-22",
+          "type": "node",
+          "parent": "1",
+          "label": "End"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-23",
+          "type": "node",
+          "parent": "1",
+          "label": "So sánh ngày ký hóa đơn và ngày lập hóa đơn&nbsp;"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-24",
+          "type": "node",
+          "parent": "1",
+          "label": "Kiểm tra trạng thái đăng ký phát hành của người bán"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-25",
+          "type": "node",
+          "parent": "1",
+          "label": "Kiểm tra loại hóa đơn có phải máy tính tiền không?"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-27",
+          "type": "edge",
+          "parent": "1",
+          "source": "8xQizgP8D05e8BYIR2k6-1",
+          "target": "8xQizgP8D05e8BYIR2k6-13"
+        },
+        {
+          "id": "E_X0MwBWwW5SQBAXgXPU-2",
+          "type": "edge",
+          "parent": "1",
+          "source": "8xQizgP8D05e8BYIR2k6-28"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-28",
+          "type": "node",
+          "parent": "1",
+          "label": "kiểm tra mail có chứa file zip"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-33",
+          "type": "edge",
+          "parent": "1",
+          "source": "8xQizgP8D05e8BYIR2k6-30"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-34",
+          "type": "node",
+          "parent": "8xQizgP8D05e8BYIR2k6-33",
+          "label": "có pass"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-36",
+          "type": "edge",
+          "parent": "1",
+          "source": "8xQizgP8D05e8BYIR2k6-30",
+          "target": "8xQizgP8D05e8BYIR2k6-35"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-37",
+          "type": "node",
+          "parent": "8xQizgP8D05e8BYIR2k6-36",
+          "label": "không"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-30",
+          "type": "node",
+          "parent": "1",
+          "label": "kiểm tra file zip có chứa mk&nbsp;"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-32",
+          "type": "node",
+          "parent": "1",
+          "label": "chuyển mail vào thư mục ko xử lý được"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-44",
+          "type": "edge",
+          "parent": "1",
+          "source": "8xQizgP8D05e8BYIR2k6-35",
+          "target": "8xQizgP8D05e8BYIR2k6-43"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-35",
+          "type": "node",
+          "parent": "1",
+          "label": "giải nén để lấy file&nbsp;"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-46",
+          "type": "edge",
+          "parent": "1",
+          "source": "8xQizgP8D05e8BYIR2k6-43",
+          "target": "8xQizgP8D05e8BYIR2k6-45"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-47",
+          "type": "node",
+          "parent": "8xQizgP8D05e8BYIR2k6-46",
+          "label": "có"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-43",
+          "type": "node",
+          "parent": "1",
+          "label": "các mail bị lỗi\n(chỉ chứa xml hoặc pdf)",
+          "html": "các mail bị lỗi<br>(chỉ chứa xml hoặc pdf)"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-53",
+          "type": "edge",
+          "parent": "1",
+          "source": "8xQizgP8D05e8BYIR2k6-45",
+          "target": "8xQizgP8D05e8BYIR2k6-52"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-45",
+          "type": "node",
+          "parent": "1",
+          "label": "chuyển mail vào thư mục ko xử lý được"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-49",
+          "type": "edge",
+          "parent": "1",
+          "source": "8xQizgP8D05e8BYIR2k6-43"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-51",
+          "type": "node",
+          "parent": "8xQizgP8D05e8BYIR2k6-49",
+          "label": "không"
+        },
+        {
+          "id": "8xQizgP8D05e8BYIR2k6-52",
+          "type": "node",
+          "parent": "1",
+          "label": "tổng số lượng mail(inbox+spam)= số lượng mail đã đọc được + số lượng mail chưa đọc được"
+        },
+        {
+          "id": "E_X0MwBWwW5SQBAXgXPU-4",
+          "type": "edge",
+          "parent": "1",
+          "source": "E_X0MwBWwW5SQBAXgXPU-3",
+          "target": "E_X0MwBWwW5SQBAXgXPU-6"
+        },
+        {
+          "id": "E_X0MwBWwW5SQBAXgXPU-11",
+          "type": "edge",
+          "parent": "1",
+          "source": "E_X0MwBWwW5SQBAXgXPU-3",
+          "target": "8xQizgP8D05e8BYIR2k6-30"
+        },
+        {
+          "id": "E_X0MwBWwW5SQBAXgXPU-3",
+          "type": "node",
+          "parent": "1",
+          "label": "file email vừa chứa file xml, pdf, zip"
+        },
+        {
+          "id": "E_X0MwBWwW5SQBAXgXPU-9",
+          "type": "edge",
+          "parent": "1",
+          "source": "E_X0MwBWwW5SQBAXgXPU-6",
+          "target": "E_X0MwBWwW5SQBAXgXPU-3"
+        },
+        {
+          "id": "E_X0MwBWwW5SQBAXgXPU-10",
+          "type": "node",
+          "parent": "E_X0MwBWwW5SQBAXgXPU-9",
+          "label": "không"
+        },
+        {
+          "id": "E_X0MwBWwW5SQBAXgXPU-6",
+          "type": "node",
+          "parent": "1",
+          "label": "Kiểm tra file xml có đúng định dạng file hóa đơn theo quyết đinh 1510"
+        },
+        {
+          "id": "E_X0MwBWwW5SQBAXgXPU-7",
+          "type": "edge",
+          "parent": "1",
+          "source": "E_X0MwBWwW5SQBAXgXPU-6",
+          "target": "8xQizgP8D05e8BYIR2k6-1"
+        },
+        {
+          "id": "E_X0MwBWwW5SQBAXgXPU-8",
+          "type": "node",
+          "parent": "E_X0MwBWwW5SQBAXgXPU-7",
+          "label": "có"
+        }
+      ]
+    },
+    {
+      "id": "mKmNGttes2RzGjFpmq-v",
+      "name": "Một số câu hỏi IAM",
+      "cells": [
+        {
+          "id": "1",
+          "type": "layer"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-3",
+          "type": "edge",
+          "parent": "1",
+          "source": "n8XQdZ27tEXJidVJ6gm5-1",
+          "target": "n8XQdZ27tEXJidVJ6gm5-2"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-1",
+          "type": "node",
+          "parent": "1",
+          "label": "Service đồng bộ chi tiết (tên file trong source code)"
+        },
+        {
+          "id": "iR-yz_X-m5qm4ebL_j8H-2",
+          "type": "edge",
+          "parent": "1",
+          "source": "n8XQdZ27tEXJidVJ6gm5-2",
+          "target": "iR-yz_X-m5qm4ebL_j8H-1"
+        },
+        {
+          "id": "_b810WLj3sWZKhdRjdMK-5",
+          "type": "edge",
+          "parent": "1",
+          "source": "n8XQdZ27tEXJidVJ6gm5-2",
+          "target": "_b810WLj3sWZKhdRjdMK-6"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-2",
+          "type": "node",
+          "parent": "1",
+          "label": "luồng chạy của nó như thế nào? chạy sau khi có dữ liệu đầu phiếu\nquan hệ gì với các job khác (sau khi có thông tin invoicerows khi đồng bộ đầu phiếu)",
+          "html": "luồng chạy của nó như thế nào? chạy sau khi có dữ liệu đầu phiếu<br>quan hệ gì với các job khác (sau khi có thông tin invoicerows khi đồng bộ đầu phiếu)"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-6",
+          "type": "edge",
+          "parent": "1",
+          "source": "n8XQdZ27tEXJidVJ6gm5-4",
+          "target": "n8XQdZ27tEXJidVJ6gm5-5"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-8",
+          "type": "edge",
+          "parent": "1",
+          "source": "n8XQdZ27tEXJidVJ6gm5-4",
+          "target": "n8XQdZ27tEXJidVJ6gm5-7"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-4",
+          "type": "node",
+          "parent": "1",
+          "label": "job chạy đồng bộ hóa đơn từ CQT&nbsp;"
+        },
+        {
+          "id": "_b810WLj3sWZKhdRjdMK-11",
+          "type": "edge",
+          "parent": "1",
+          "source": "n8XQdZ27tEXJidVJ6gm5-5",
+          "target": "_b810WLj3sWZKhdRjdMK-10"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-5",
+          "type": "node",
+          "parent": "1",
+          "label": "thời gian ngắn : hàng ngày đồng bộ 30 ngày từ ngày hiện tại đổ về trước"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-7",
+          "type": "node",
+          "parent": "1",
+          "label": "thời gian dài: đồng bộ theo tuần(theo thời gian cài đặt), chu kỳ 28 , theo số lượng"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-12",
+          "type": "edge",
+          "parent": "1",
+          "source": "n8XQdZ27tEXJidVJ6gm5-10",
+          "target": "n8XQdZ27tEXJidVJ6gm5-11"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-23",
+          "type": "edge",
+          "parent": "1",
+          "source": "n8XQdZ27tEXJidVJ6gm5-10",
+          "target": "n8XQdZ27tEXJidVJ6gm5-22"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-10",
+          "type": "node",
+          "parent": "1",
+          "label": "nguyên tắc ghi đè dữ liệu(khi đồng bộ)"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-16",
+          "type": "edge",
+          "parent": "1",
+          "source": "n8XQdZ27tEXJidVJ6gm5-11",
+          "target": "n8XQdZ27tEXJidVJ6gm5-15"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-11",
+          "type": "node",
+          "parent": "1",
+          "label": "đồng bộ từ thuế trước, sau đó quét được hóa đơn từ email"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-13",
+          "type": "node",
+          "parent": "1",
+          "label": "xml giữ nguyên, cập nhập pdf, thêm trường gmail messenger(để biết nguồn thông tin đã lấy)"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-18",
+          "type": "edge",
+          "parent": "1",
+          "source": "n8XQdZ27tEXJidVJ6gm5-15",
+          "target": "n8XQdZ27tEXJidVJ6gm5-17"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-21",
+          "type": "node",
+          "parent": "n8XQdZ27tEXJidVJ6gm5-18",
+          "label": "không có"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-19",
+          "type": "edge",
+          "parent": "1",
+          "source": "n8XQdZ27tEXJidVJ6gm5-15",
+          "target": "n8XQdZ27tEXJidVJ6gm5-13"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-20",
+          "type": "node",
+          "parent": "n8XQdZ27tEXJidVJ6gm5-19",
+          "label": "trùng bộ key"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-15",
+          "type": "node",
+          "parent": "1",
+          "label": "có email"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-17",
+          "type": "node",
+          "parent": "1",
+          "label": "giữ nguyên thông tin xml, html"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-25",
+          "type": "edge",
+          "parent": "1",
+          "source": "n8XQdZ27tEXJidVJ6gm5-22",
+          "target": "n8XQdZ27tEXJidVJ6gm5-24"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-22",
+          "type": "node",
+          "parent": "1",
+          "label": "email về trước, \nSau đó quét được hóa đơn trên thuế",
+          "html": "email về trước, <br>Sau đó quét được hóa đơn trên thuế"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-27",
+          "type": "edge",
+          "parent": "1",
+          "source": "n8XQdZ27tEXJidVJ6gm5-24",
+          "target": "n8XQdZ27tEXJidVJ6gm5-26"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-24",
+          "type": "node",
+          "parent": "1",
+          "label": "cập nhập thông tin pdf, xml vào DB"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-29",
+          "type": "edge",
+          "parent": "1",
+          "source": "n8XQdZ27tEXJidVJ6gm5-26",
+          "target": "n8XQdZ27tEXJidVJ6gm5-28"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-30",
+          "type": "node",
+          "parent": "n8XQdZ27tEXJidVJ6gm5-29",
+          "label": "không"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-32",
+          "type": "edge",
+          "parent": "1",
+          "source": "n8XQdZ27tEXJidVJ6gm5-26",
+          "target": "n8XQdZ27tEXJidVJ6gm5-31"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-33",
+          "type": "node",
+          "parent": "n8XQdZ27tEXJidVJ6gm5-32",
+          "label": "có"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-26",
+          "type": "node",
+          "parent": "1",
+          "label": "&nbsp;hóa đơn từ thuế"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-28",
+          "type": "node",
+          "parent": "1",
+          "label": "giữ nguyên thông tin"
+        },
+        {
+          "id": "_b810WLj3sWZKhdRjdMK-4",
+          "type": "edge",
+          "parent": "1",
+          "source": "n8XQdZ27tEXJidVJ6gm5-31",
+          "target": "_b810WLj3sWZKhdRjdMK-3"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-31",
+          "type": "node",
+          "parent": "1",
+          "label": "cập nhập lại , cập nhập lại thông tin từ header, details lấy từ thuế"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-36",
+          "type": "edge",
+          "parent": "1",
+          "source": "n8XQdZ27tEXJidVJ6gm5-37",
+          "target": "n8XQdZ27tEXJidVJ6gm5-38"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-42",
+          "type": "edge",
+          "parent": "1",
+          "source": "n8XQdZ27tEXJidVJ6gm5-37",
+          "target": "n8XQdZ27tEXJidVJ6gm5-40"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-43",
+          "type": "edge",
+          "parent": "1",
+          "source": "n8XQdZ27tEXJidVJ6gm5-37",
+          "target": "n8XQdZ27tEXJidVJ6gm5-39"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-44",
+          "type": "edge",
+          "parent": "1",
+          "source": "n8XQdZ27tEXJidVJ6gm5-37",
+          "target": "n8XQdZ27tEXJidVJ6gm5-41"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-46",
+          "type": "edge",
+          "parent": "1",
+          "source": "n8XQdZ27tEXJidVJ6gm5-37",
+          "target": "n8XQdZ27tEXJidVJ6gm5-45"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-50",
+          "type": "edge",
+          "parent": "1",
+          "source": "n8XQdZ27tEXJidVJ6gm5-37",
+          "target": "n8XQdZ27tEXJidVJ6gm5-47"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-53",
+          "type": "edge",
+          "parent": "1",
+          "source": "n8XQdZ27tEXJidVJ6gm5-37",
+          "target": "n8XQdZ27tEXJidVJ6gm5-52"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-55",
+          "type": "edge",
+          "parent": "1",
+          "source": "n8XQdZ27tEXJidVJ6gm5-37",
+          "target": "n8XQdZ27tEXJidVJ6gm5-54"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-57",
+          "type": "edge",
+          "parent": "1",
+          "source": "n8XQdZ27tEXJidVJ6gm5-37",
+          "target": "n8XQdZ27tEXJidVJ6gm5-56"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-59",
+          "type": "edge",
+          "parent": "1",
+          "source": "n8XQdZ27tEXJidVJ6gm5-37",
+          "target": "n8XQdZ27tEXJidVJ6gm5-58"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-37",
+          "type": "node",
+          "parent": "1",
+          "label": "job đang chạy"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-38",
+          "type": "node",
+          "parent": "1",
+          "label": "job đồng hộ hóa đơn mua vào&nbsp;sync_invoices_purchase"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-39",
+          "type": "node",
+          "parent": "1",
+          "label": "job đồng hộ hóa bán ra&nbsp; sync_invoices_sold"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-40",
+          "type": "node",
+          "parent": "1",
+          "label": "job đồng hộ hóa đơn mua vào MTT sync_invoices_purchase_sco"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-41",
+          "type": "node",
+          "parent": "1",
+          "label": "job đồng hộ hóa bán ra&nbsp; MTT&nbsp; sync_invoices_sold_sco"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-45",
+          "type": "node",
+          "parent": "1",
+          "label": "job tổng hợp số liệu sau khi lấy trạng thái doanh nghiệp auto_aggregate_by_tax_code",
+          "html": "job tổng hợp số liệu sau khi lấy trạng thái doanh nghiệp auto_aggregate_by_tax_code<div style=\"box-sizing: border-box; -webkit-font-smoothing: antialiased; user-select: none; outline-color: rgb(4, 152, 236); flex: 0 0 auto; color: rgb(61, 79, 88); font-family: &quot;Source Code Pro&quot;, Menlo, monospace; text-align: left; background-color: rgb(255, 255, 255);\" role=\"presentation\" class=\"leafygreen-ui-185mj21\"><br></div><div style=\"box-sizing: border-box; -webkit-font-smoothing: antialiased; user-select: none; outline-color: rgb(4, 152, 236); flex: 0 0 auto; color: rgb(61, 79, 88); font-family: &quot;Source Code Pro&quot;, Menlo, monospace; text-align: left; background-color: rgb(255, 255, 255);\" role=\"presentation\" class=\"leafygreen-ui-185mj21\"></div><div style=\"box-sizing: border-box; -webkit-font-smoothing: antialiased; user-select: text; outline-color: rgb(4, 152, 236); flex: 1 1 0%; min-width: 0px; max-width: 100%; color: rgb(61, 79, 88); font-family: &quot;Source Code Pro&quot;, Menlo, monospace; text-align: left; background-color: rgb(255, 255, 255);\" data-testid=\"hadron-document-element-value\" class=\"leafygreen-ui-gzqbgx\"><div style=\"box-sizing: border-box; -webkit-font-smoothing: antialiased; user-select: text; outline-color: rgb(4, 152, 236);\" data-testid=\"hadron-document-clickable-value\"></div></div>"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-47",
+          "type": "node",
+          "parent": "1",
+          "label": "job đồng bộ thông báo 04SS với hóa đơn mua vào  sync_hdss_4_sold,sync_hdss_5_sold,sync_hdss_6_sold",
+          "html": "job đồng bộ thông báo 04SS với hóa đơn mua vào&nbsp; sync_hdss_4_sold,sync_hdss_5_sold,sync_hdss_6_sold<br><div style=\"box-sizing: border-box; -webkit-font-smoothing: antialiased; user-select: none; outline-color: rgb(4, 152, 236); flex: 0 0 auto; color: rgb(61, 79, 88); font-family: &quot;Source Code Pro&quot;, Menlo, monospace; text-align: left; background-color: rgb(255, 255, 255);\" role=\"presentation\" class=\"leafygreen-ui-185mj21\"></div><div style=\"box-sizing: border-box; -webkit-font-smoothing: antialiased; user-select: text; outline-color: rgb(4, 152, 236); flex: 1 1 0%; min-width: 0px; max-width: 100%; color: rgb(61, 79, 88); font-family: &quot;Source Code Pro&quot;, Menlo, monospace; text-align: left; background-color: rgb(255, 255, 255);\" data-testid=\"hadron-document-element-value\" class=\"leafygreen-ui-gzqbgx\"><div style=\"box-sizing: border-box; -webkit-font-smoothing: antialiased; user-select: text; outline-color: rgb(4, 152, 236);\" data-testid=\"hadron-document-clickable-value\"></div></div>"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-52",
+          "type": "node",
+          "parent": "1",
+          "label": "job đồng bộ thông báo 04SS hóa đơn bán ra \nsync_hdtbssrses",
+          "html": "job đồng bộ thông báo 04SS hóa đơn bán ra&nbsp;<br>sync_hdtbssrses"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-54",
+          "type": "node",
+          "parent": "1",
+          "label": "job đồng bộ thông báo 04SS hóa đơn bán ra MTT sync_hdtbssrses_sco"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-56",
+          "type": "node",
+          "parent": "1",
+          "label": "job đồng bộ email ở gmail account"
+        },
+        {
+          "id": "SBl7z5j_AJ_rMBy3y3Y3-1",
+          "type": "node",
+          "parent": "1",
+          "label": "Hai job này chạy riêng hay chạy chung: là 1 job"
+        },
+        {
+          "id": "SBl7z5j_AJ_rMBy3y3Y3-2",
+          "type": "node",
+          "parent": "1",
+          "label": "Cơ chế chạy như nào(dựa vào last_sync để lấy thời điểm đồng bộ cuối cùng)"
+        },
+        {
+          "id": "SBl7z5j_AJ_rMBy3y3Y3-3",
+          "type": "node",
+          "parent": "1",
+          "label": "Thể hiện ở đoạn nào trong code?&nbsp;node/service/invoices/crawl.js dòng 150(dòng này thay đổi theo ngày)"
+        },
+        {
+          "id": "SBl7z5j_AJ_rMBy3y3Y3-4",
+          "type": "node",
+          "parent": "1",
+          "label": "1. Job đồng bộ chi tiết"
+        },
+        {
+          "id": "SBl7z5j_AJ_rMBy3y3Y3-5",
+          "type": "node",
+          "parent": "1",
+          "label": "2. Logic xử lý cho việc đồng bộ hàng ngày và đồng bộ đẻ lấy các hóa đơn bị điều chỉnh. thay thế, hủy"
+        },
+        {
+          "id": "SBl7z5j_AJ_rMBy3y3Y3-6",
+          "type": "node",
+          "parent": "1",
+          "label": "Nếu lấy chi tiết hóa đơn từ CQT, trường hợp hóa đơn không mã gửi BTH trên thuế không có thì xử lý ntn?"
+        },
+        {
+          "id": "SBl7z5j_AJ_rMBy3y3Y3-8",
+          "type": "node",
+          "parent": "1",
+          "label": "3. Trật tự xử lý khi đồng bộ hóa đơn từ 2 nguồn"
+        },
+        {
+          "id": "SBl7z5j_AJ_rMBy3y3Y3-9",
+          "type": "node",
+          "parent": "1",
+          "label": "4. Danh sách các job đã biết và các job ẩn"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-58",
+          "type": "node",
+          "parent": "1",
+          "label": "job auto_login"
+        },
+        {
+          "id": "n8XQdZ27tEXJidVJ6gm5-61",
+          "type": "node",
+          "parent": "1",
+          "label": "Xem đồng bộ từ email, bóc tách được đầu phiếu, chi tiết rồi sao lại đồng bộ chi tiết từ thuế về nữa?\n vì dữ liệu từ thuế là dữ liệu chính xác nhất và đề phòng trường hợp thiếu thông tin khi đồng bộ từ mail về",
+          "html": "<div style=\"border-color: var(--border-color); font-size: 14px;\">Xem đồng bộ từ email, bóc tách được đầu phiếu, chi tiết rồi sao lại đồng bộ chi tiết từ thuế về nữa?</div><div style=\"font-size: 14px;\">&nbsp;vì dữ liệu từ thuế là dữ liệu chính xác nhất và đề phòng trường hợp thiếu thông tin khi đồng bộ từ mail về</div><div style=\"border-color: var(--border-color); margin-top: 10px; font-size: 14px;\"><div style=\"border-color: var(--border-color); display: flex; flex-flow: row; align-items: center; flex: 1 1 0%; color: var(--BA50); user-select: none; width: 746.469px; font-size: 14px;\" class=\"card-send-time flx flx-al-c flx-1\"></div></div>"
+        },
+        {
+          "id": "VWYEH9n9G1g9ABfJ_PZL-1",
+          "type": "node",
+          "parent": "1",
+          "label": "Cập nhật PDF gốc của Nhà cung cấp lưu vào đầu? theo thứ tự cập nhập tay&gt; cập nhập email&gt; lấy từ thuế"
+        },
+        {
+          "id": "iR-yz_X-m5qm4ebL_j8H-1",
+          "type": "node",
+          "parent": "1",
+          "label": "nằm trong external account type: hoadondientu-gov"
+        },
+        {
+          "id": "_b810WLj3sWZKhdRjdMK-3",
+          "type": "node",
+          "parent": "1",
+          "label": "từ bảng invoiceraws header: object"
+        },
+        {
+          "id": "_b810WLj3sWZKhdRjdMK-6",
+          "type": "node",
+          "parent": "1",
+          "label": "từ bảng invoiceraws details: object"
+        },
+        {
+          "id": "_b810WLj3sWZKhdRjdMK-10",
+          "type": "node",
+          "parent": "1",
+          "label": "chia đồng bộ 2 lần : 28 + ngày còn lại"
+        },
+        {
+          "id": "_b810WLj3sWZKhdRjdMK-14",
+          "type": "edge",
+          "parent": "1",
+          "source": "_b810WLj3sWZKhdRjdMK-12",
+          "target": "_b810WLj3sWZKhdRjdMK-13"
+        },
+        {
+          "id": "_b810WLj3sWZKhdRjdMK-12",
+          "type": "node",
+          "parent": "1"
+        },
+        {
+          "id": "_b810WLj3sWZKhdRjdMK-13",
+          "type": "node",
+          "parent": "1",
+          "label": "sau khi có dữ liệu invoicerows sẽ chạy job đồng bộ chi tiết(chỉ chạy 1 lần khi đã thành công)"
+        },
+        {
+          "id": "_b810WLj3sWZKhdRjdMK-15",
+          "type": "node",
+          "parent": "1",
+          "label": "thông tin lấy từ ngày đồng bộ quan trọng hơn thông tin lấy từ nguồn nào"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-3",
+          "type": "edge",
+          "parent": "1",
+          "source": "q-AYknFHFlemf-lUO4Wz-1",
+          "target": "q-AYknFHFlemf-lUO4Wz-2"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-5",
+          "type": "edge",
+          "parent": "1",
+          "source": "q-AYknFHFlemf-lUO4Wz-1",
+          "target": "q-AYknFHFlemf-lUO4Wz-4"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-7",
+          "type": "edge",
+          "parent": "1",
+          "source": "q-AYknFHFlemf-lUO4Wz-1",
+          "target": "q-AYknFHFlemf-lUO4Wz-6"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-1",
+          "type": "node",
+          "parent": "1",
+          "label": "Màn hình cần viết mới"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-9",
+          "type": "edge",
+          "parent": "1",
+          "source": "q-AYknFHFlemf-lUO4Wz-2",
+          "target": "q-AYknFHFlemf-lUO4Wz-8"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-11",
+          "type": "edge",
+          "parent": "1",
+          "source": "q-AYknFHFlemf-lUO4Wz-2",
+          "target": "q-AYknFHFlemf-lUO4Wz-10"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-13",
+          "type": "edge",
+          "parent": "1",
+          "source": "q-AYknFHFlemf-lUO4Wz-2",
+          "target": "q-AYknFHFlemf-lUO4Wz-12"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-15",
+          "type": "edge",
+          "parent": "1",
+          "source": "q-AYknFHFlemf-lUO4Wz-2",
+          "target": "q-AYknFHFlemf-lUO4Wz-14"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-17",
+          "type": "edge",
+          "parent": "1",
+          "source": "q-AYknFHFlemf-lUO4Wz-2",
+          "target": "q-AYknFHFlemf-lUO4Wz-16"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-2",
+          "type": "node",
+          "parent": "1",
+          "label": "Execution truy xuất , quản lý thống kê\nhóa đơn mua vào",
+          "html": "<div style=\"border-color: var(--border-color);\">Execution truy xuất , quản lý thống kê</div><div style=\"border-color: var(--border-color);\">hóa đơn mua vào</div>"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-19",
+          "type": "edge",
+          "parent": "1",
+          "source": "q-AYknFHFlemf-lUO4Wz-4",
+          "target": "q-AYknFHFlemf-lUO4Wz-18"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-21",
+          "type": "edge",
+          "parent": "1",
+          "source": "q-AYknFHFlemf-lUO4Wz-4",
+          "target": "q-AYknFHFlemf-lUO4Wz-20"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-23",
+          "type": "edge",
+          "parent": "1",
+          "source": "q-AYknFHFlemf-lUO4Wz-4",
+          "target": "q-AYknFHFlemf-lUO4Wz-22"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-4",
+          "type": "node",
+          "parent": "1",
+          "label": "report quản lý danh sách các đơn vị chi nhánh, email đơn vị",
+          "html": "<div style=\"border-color: var(--border-color);\">report quản lý danh sách các đơn vị chi nhánh, email đơn vị</div><div style=\"border-color: var(--border-color);\"><br style=\"border-color: var(--border-color);\"></div>"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-38",
+          "type": "edge",
+          "parent": "1",
+          "source": "q-AYknFHFlemf-lUO4Wz-6",
+          "target": "q-AYknFHFlemf-lUO4Wz-24"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-40",
+          "type": "edge",
+          "parent": "1",
+          "source": "q-AYknFHFlemf-lUO4Wz-6",
+          "target": "q-AYknFHFlemf-lUO4Wz-28"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-6",
+          "type": "node",
+          "parent": "1",
+          "label": "system admin phân quyền tài khoản theo nhóm quyền và chức năng(chỉ dành cho tk admin)"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-8",
+          "type": "node",
+          "parent": "1",
+          "label": "Hóa đơn điều chỉnh&nbsp;INQUIRY OF ADJUSTMENT INVOICE"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-10",
+          "type": "node",
+          "parent": "1",
+          "label": "Hóa đơn thay thế&nbsp;INQUIRY OF REPLACED INVOICE"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-12",
+          "type": "node",
+          "parent": "1",
+          "label": "DOWNLOAD EINVOICE :Download XML dự vào file upload hoặc multil choice"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-14",
+          "type": "node",
+          "parent": "1",
+          "label": "Email box: thống kê đọc email theo khoảng thời gian theo tuần(thành công, lỗi- chi tiết từng lỗi)"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-16",
+          "type": "node",
+          "parent": "1",
+          "label": "Vender list: danh sách đơn vị pháp lý shinhanbank"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-18",
+          "type": "node",
+          "parent": "1",
+          "label": "E-invoice email danh sách các email chưa được xử lý(sai tên đơn vị, chứa file zip có pass)"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-20",
+          "type": "node",
+          "parent": "1",
+          "label": "Business Infomation danh sách các đơn vị chi nhánh"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-22",
+          "type": "node",
+          "parent": "1",
+          "label": "VAT rate danh sách thuế suất"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-24",
+          "type": "node",
+          "parent": "1",
+          "label": "Uer account: quản lý user"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-25",
+          "type": "edge",
+          "parent": "1",
+          "source": "q-AYknFHFlemf-lUO4Wz-28",
+          "target": "q-AYknFHFlemf-lUO4Wz-30"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-26",
+          "type": "edge",
+          "parent": "1",
+          "source": "q-AYknFHFlemf-lUO4Wz-28",
+          "target": "q-AYknFHFlemf-lUO4Wz-32"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-27",
+          "type": "edge",
+          "parent": "1",
+          "source": "q-AYknFHFlemf-lUO4Wz-28",
+          "target": "q-AYknFHFlemf-lUO4Wz-34"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-28",
+          "type": "node",
+          "parent": "1",
+          "label": "Authority Assignment: quản lý nhóm quyền"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-29",
+          "type": "edge",
+          "parent": "1",
+          "source": "q-AYknFHFlemf-lUO4Wz-30",
+          "target": "q-AYknFHFlemf-lUO4Wz-37"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-30",
+          "type": "node",
+          "parent": "1",
+          "label": "User"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-31",
+          "type": "edge",
+          "parent": "1",
+          "source": "q-AYknFHFlemf-lUO4Wz-32",
+          "target": "q-AYknFHFlemf-lUO4Wz-36"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-32",
+          "type": "node",
+          "parent": "1",
+          "label": "Macker"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-33",
+          "type": "edge",
+          "parent": "1",
+          "source": "q-AYknFHFlemf-lUO4Wz-34",
+          "target": "q-AYknFHFlemf-lUO4Wz-35"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-34",
+          "type": "node",
+          "parent": "1",
+          "label": "Admin"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-35",
+          "type": "node",
+          "parent": "1",
+          "label": "xem được hóa đơn của nó và tất cả các chi nhánh"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-36",
+          "type": "node",
+          "parent": "1",
+          "label": "Chỉ xem được hóa đơn của chi nhánh đó"
+        },
+        {
+          "id": "q-AYknFHFlemf-lUO4Wz-37",
+          "type": "node",
+          "parent": "1",
+          "label": "Chỉ xem được hóa đơn của chi nhánh đó"
+        }
+      ]
+    }
+  ]
+}
